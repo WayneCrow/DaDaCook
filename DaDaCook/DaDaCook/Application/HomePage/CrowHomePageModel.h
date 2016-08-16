@@ -1,13 +1,13 @@
 //
-//  CrowMainPageModel.m
+//  CrowMainPageModel.h
 //  DaDaCook
 //
 //  Created by tarena11 on 16/8/16.
 //  Copyright © 2016年 Wayne. All rights reserved.
 //
 
-#import "CrowMainPageModel.h"
+#import <Foundation/Foundation.h>
 
-@implementation CrowMainPageModel
+@interface CrowHomePageModel : NSObject
 
 @end

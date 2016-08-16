@@ -7,7 +7,15 @@
 //
 
 #import "CrowBaseNetworking.h"
+#import "CrowHomePageHeaderModel.h"
 
 @interface CrowNetManager : CrowBaseNetworking
+
+/**
+ *  首页
+ */
+
+// 头部广告
++ (id)postHomePageHeaderAdCompletionHandler:(void(^)(CrowHomePageHeaderModel *model, NSError *error))completionHandler;
 
 @end

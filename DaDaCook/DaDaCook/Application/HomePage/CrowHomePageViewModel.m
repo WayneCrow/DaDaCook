@@ -1,13 +1,13 @@
 //
-//  CrowMainPageViewModel.h
+//  CrowMainPageViewModel.m
 //  DaDaCook
 //
 //  Created by tarena11 on 16/8/16.
 //  Copyright © 2016年 Wayne. All rights reserved.
 //
 
-#import "CrowBaseViewModel.h"
+#import "CrowHomePageViewModel.h"
 
-@interface CrowMainPageViewModel : CrowBaseViewModel
+@implementation CrowHomePageViewModel
 
 @end
