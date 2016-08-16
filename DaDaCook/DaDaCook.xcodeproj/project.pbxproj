@@ -14,11 +14,22 @@
 		9B7843461D62EA0800F5A468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843441D62EA0800F5A468 /* Main.storyboard */; };
 		9B7843481D62EA0800F5A468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843471D62EA0800F5A468 /* Assets.xcassets */; };
 		9B78434B1D62EA0800F5A468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843491D62EA0800F5A468 /* LaunchScreen.storyboard */; };
-		9B78435E1D62EC4300F5A468 /* DiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78435D1D62EC4300F5A468 /* DiscoverModel.m */; };
-		9B7843611D62EC6F00F5A468 /* DiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843601D62EC6F00F5A468 /* DiscoverViewModel.m */; };
-		9B7843681D62ECCC00F5A468 /* DiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843661D62ECCC00F5A468 /* DiscoverCell.m */; };
-		9B7843691D62ECCC00F5A468 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843671D62ECCC00F5A468 /* DiscoverCell.xib */; };
-		9B78436C1D62ECF400F5A468 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78436B1D62ECF400F5A468 /* DiscoverTableViewController.m */; };
+		9B7843741D62F71700F5A468 /* NSObject+CrowParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843731D62F71700F5A468 /* NSObject+CrowParse.m */; };
+		9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843761D62F89500F5A468 /* NSString+Crow.m */; };
+		9B78437D1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78437C1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m */; };
+		9B7843801D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78437F1D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m */; };
+		9B7843831D63019400F5A468 /* UIView+CrowMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843821D63019400F5A468 /* UIView+CrowMBProgressHUD.m */; };
+		9B7843861D6302E100F5A468 /* CrowBaseNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843851D6302E100F5A468 /* CrowBaseNetworking.m */; };
+		9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843881D63096400F5A468 /* CrowNetManager.m */; };
+		9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */; };
+		9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78438E1D630A4900F5A468 /* CrowDiscoverTableViewController.m */; };
+		9B7843961D630A7700F5A468 /* CrowDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843941D630A7700F5A468 /* CrowDiscoverCell.m */; };
+		9B7843971D630A7700F5A468 /* CrowDiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843951D630A7700F5A468 /* CrowDiscoverCell.xib */; };
+		9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */; };
+		9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */; };
+		9B7843AD1D630B5900F5A468 /* CrowMainPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843AC1D630B5900F5A468 /* CrowMainPageModel.m */; };
+		9B7843B01D630B6C00F5A468 /* CrowMainPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843AF1D630B6C00F5A468 /* CrowMainPageViewModel.m */; };
+		9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,18 +42,41 @@
 		9B7843411D62EA0800F5A468 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9B7843421D62EA0800F5A468 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9B7843451D62EA0800F5A468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B7843471D62EA0800F5A468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B7843471D62EA0800F5A468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		9B78434A1D62EA0800F5A468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B78434C1D62EA0800F5A468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B78435C1D62EC4300F5A468 /* DiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverModel.h; sourceTree = "<group>"; };
-		9B78435D1D62EC4300F5A468 /* DiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverModel.m; sourceTree = "<group>"; };
-		9B78435F1D62EC6F00F5A468 /* DiscoverViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewModel.h; sourceTree = "<group>"; };
-		9B7843601D62EC6F00F5A468 /* DiscoverViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewModel.m; sourceTree = "<group>"; };
-		9B7843651D62ECCC00F5A468 /* DiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCell.h; sourceTree = "<group>"; };
-		9B7843661D62ECCC00F5A468 /* DiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCell.m; sourceTree = "<group>"; };
-		9B7843671D62ECCC00F5A468 /* DiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCell.xib; sourceTree = "<group>"; };
-		9B78436A1D62ECF400F5A468 /* DiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewController.h; sourceTree = "<group>"; };
-		9B78436B1D62ECF400F5A468 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
+		9B7843711D62F5BB00F5A468 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9B7843721D62F71700F5A468 /* NSObject+CrowParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CrowParse.h"; sourceTree = "<group>"; };
+		9B7843731D62F71700F5A468 /* NSObject+CrowParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CrowParse.m"; sourceTree = "<group>"; };
+		9B7843751D62F89500F5A468 /* NSString+Crow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crow.h"; sourceTree = "<group>"; };
+		9B7843761D62F89500F5A468 /* NSString+Crow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crow.m"; sourceTree = "<group>"; };
+		9B78437B1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CrowImageTitleSpacing.h"; sourceTree = "<group>"; };
+		9B78437C1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CrowImageTitleSpacing.m"; sourceTree = "<group>"; };
+		9B78437E1D62FF3E00F5A468 /* UIScrollView+CrowRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CrowRefresh.h"; sourceTree = "<group>"; };
+		9B78437F1D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CrowRefresh.m"; sourceTree = "<group>"; };
+		9B7843811D63019400F5A468 /* UIView+CrowMBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CrowMBProgressHUD.h"; sourceTree = "<group>"; };
+		9B7843821D63019400F5A468 /* UIView+CrowMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CrowMBProgressHUD.m"; sourceTree = "<group>"; };
+		9B7843841D6302E100F5A468 /* CrowBaseNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowBaseNetworking.h; sourceTree = "<group>"; };
+		9B7843851D6302E100F5A468 /* CrowBaseNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowBaseNetworking.m; sourceTree = "<group>"; };
+		9B7843871D63096400F5A468 /* CrowNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowNetManager.h; sourceTree = "<group>"; };
+		9B7843881D63096400F5A468 /* CrowNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowNetManager.m; sourceTree = "<group>"; };
+		9B78438A1D63098C00F5A468 /* CrowBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowBaseViewModel.h; sourceTree = "<group>"; };
+		9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowBaseViewModel.m; sourceTree = "<group>"; };
+		9B78438D1D630A4900F5A468 /* CrowDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverTableViewController.h; sourceTree = "<group>"; };
+		9B78438E1D630A4900F5A468 /* CrowDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverTableViewController.m; sourceTree = "<group>"; };
+		9B7843931D630A7700F5A468 /* CrowDiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverCell.h; sourceTree = "<group>"; };
+		9B7843941D630A7700F5A468 /* CrowDiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverCell.m; sourceTree = "<group>"; };
+		9B7843951D630A7700F5A468 /* CrowDiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrowDiscoverCell.xib; sourceTree = "<group>"; };
+		9B7843981D630A9A00F5A468 /* CrowDiscoverViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverViewModel.h; sourceTree = "<group>"; };
+		9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverViewModel.m; sourceTree = "<group>"; };
+		9B78439B1D630AB000F5A468 /* CrowDiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverModel.h; sourceTree = "<group>"; };
+		9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverModel.m; sourceTree = "<group>"; };
+		9B7843AB1D630B5900F5A468 /* CrowMainPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMainPageModel.h; sourceTree = "<group>"; };
+		9B7843AC1D630B5900F5A468 /* CrowMainPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMainPageModel.m; sourceTree = "<group>"; };
+		9B7843AE1D630B6C00F5A468 /* CrowMainPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMainPageViewModel.h; sourceTree = "<group>"; };
+		9B7843AF1D630B6C00F5A468 /* CrowMainPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMainPageViewModel.m; sourceTree = "<group>"; };
+		9B7843B11D630C2D00F5A468 /* CrowMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMineTableViewController.h; sourceTree = "<group>"; };
+		9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMineTableViewController.m; sourceTree = "<group>"; };
 		C371663D6B1A633454B6CDB4 /* Pods-DaDaCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaDaCook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaDaCook/Pods-DaDaCook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +141,6 @@
 				9B7843591D62EBCE00F5A468 /* Resource */,
 				9B78435A1D62EBCE00F5A468 /* Tool */,
 				9B78435B1D62EBCE00F5A468 /* Vendor */,
-				9B7843441D62EA0800F5A468 /* Main.storyboard */,
-				9B7843471D62EA0800F5A468 /* Assets.xcassets */,
-				9B7843491D62EA0800F5A468 /* LaunchScreen.storyboard */,
-				9B78434C1D62EA0800F5A468 /* Info.plist */,
 				9B78433B1D62EA0800F5A468 /* Supporting Files */,
 			);
 			path = DaDaCook;
@@ -119,7 +149,9 @@
 		9B78433B1D62EA0800F5A468 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B78434C1D62EA0800F5A468 /* Info.plist */,
 				9B78433C1D62EA0800F5A468 /* main.m */,
+				9B7843711D62F5BB00F5A468 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -127,9 +159,11 @@
 		9B7843521D62EBCE00F5A468 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				9B7843541D62EBCE00F5A468 /* HomePage */,
+				9B7843A21D630AFA00F5A468 /* MainPage */,
 				9B7843531D62EBCE00F5A468 /* Discover */,
 				9B7843551D62EBCE00F5A468 /* Mine */,
+				9B78438A1D63098C00F5A468 /* CrowBaseViewModel.h */,
+				9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -145,16 +179,13 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
-		9B7843541D62EBCE00F5A468 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
 		9B7843551D62EBCE00F5A468 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				9B7843AA1D630B3B00F5A468 /* Model */,
+				9B7843A91D630B3600F5A468 /* ViewModel */,
+				9B7843A81D630B3100F5A468 /* View */,
+				9B7843A71D630B2900F5A468 /* ViewController */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -162,6 +193,16 @@
 		9B7843561D62EBCE00F5A468 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9B7843721D62F71700F5A468 /* NSObject+CrowParse.h */,
+				9B7843731D62F71700F5A468 /* NSObject+CrowParse.m */,
+				9B7843751D62F89500F5A468 /* NSString+Crow.h */,
+				9B7843761D62F89500F5A468 /* NSString+Crow.m */,
+				9B78437B1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.h */,
+				9B78437C1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m */,
+				9B78437E1D62FF3E00F5A468 /* UIScrollView+CrowRefresh.h */,
+				9B78437F1D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m */,
+				9B7843811D63019400F5A468 /* UIView+CrowMBProgressHUD.h */,
+				9B7843821D63019400F5A468 /* UIView+CrowMBProgressHUD.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -176,6 +217,10 @@
 		9B7843581D62EBCE00F5A468 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				9B7843841D6302E100F5A468 /* CrowBaseNetworking.h */,
+				9B7843851D6302E100F5A468 /* CrowBaseNetworking.m */,
+				9B7843871D63096400F5A468 /* CrowNetManager.h */,
+				9B7843881D63096400F5A468 /* CrowNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -183,6 +228,9 @@
 		9B7843591D62EBCE00F5A468 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9B7843441D62EA0800F5A468 /* Main.storyboard */,
+				9B7843471D62EA0800F5A468 /* Assets.xcassets */,
+				9B7843491D62EA0800F5A468 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -204,8 +252,8 @@
 		9B78436D1D62ED2000F5A468 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9B78436A1D62ECF400F5A468 /* DiscoverTableViewController.h */,
-				9B78436B1D62ECF400F5A468 /* DiscoverTableViewController.m */,
+				9B78438D1D630A4900F5A468 /* CrowDiscoverTableViewController.h */,
+				9B78438E1D630A4900F5A468 /* CrowDiscoverTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -213,9 +261,9 @@
 		9B78436E1D62ED3100F5A468 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9B7843651D62ECCC00F5A468 /* DiscoverCell.h */,
-				9B7843661D62ECCC00F5A468 /* DiscoverCell.m */,
-				9B7843671D62ECCC00F5A468 /* DiscoverCell.xib */,
+				9B7843931D630A7700F5A468 /* CrowDiscoverCell.h */,
+				9B7843941D630A7700F5A468 /* CrowDiscoverCell.m */,
+				9B7843951D630A7700F5A468 /* CrowDiscoverCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -223,8 +271,8 @@
 		9B78436F1D62ED3600F5A468 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9B78435F1D62EC6F00F5A468 /* DiscoverViewModel.h */,
-				9B7843601D62EC6F00F5A468 /* DiscoverViewModel.m */,
+				9B7843981D630A9A00F5A468 /* CrowDiscoverViewModel.h */,
+				9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -232,8 +280,81 @@
 		9B7843701D62ED3F00F5A468 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9B78435C1D62EC4300F5A468 /* DiscoverModel.h */,
-				9B78435D1D62EC4300F5A468 /* DiscoverModel.m */,
+				9B78439B1D630AB000F5A468 /* CrowDiscoverModel.h */,
+				9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B7843A21D630AFA00F5A468 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				9B7843A61D630B2200F5A468 /* Model */,
+				9B7843A51D630B1C00F5A468 /* ViewModel */,
+				9B7843A41D630B1800F5A468 /* View */,
+				9B7843A31D630B0F00F5A468 /* ViewController */,
+			);
+			name = MainPage;
+			sourceTree = "<group>";
+		};
+		9B7843A31D630B0F00F5A468 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9B7843A41D630B1800F5A468 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9B7843A51D630B1C00F5A468 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B7843AE1D630B6C00F5A468 /* CrowMainPageViewModel.h */,
+				9B7843AF1D630B6C00F5A468 /* CrowMainPageViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B7843A61D630B2200F5A468 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B7843AB1D630B5900F5A468 /* CrowMainPageModel.h */,
+				9B7843AC1D630B5900F5A468 /* CrowMainPageModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B7843A71D630B2900F5A468 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B7843B11D630C2D00F5A468 /* CrowMineTableViewController.h */,
+				9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9B7843A81D630B3100F5A468 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9B7843A91D630B3600F5A468 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B7843AA1D630B3B00F5A468 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -299,10 +420,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7843691D62ECCC00F5A468 /* DiscoverCell.xib in Resources */,
 				9B78434B1D62EA0800F5A468 /* LaunchScreen.storyboard in Resources */,
 				9B7843481D62EA0800F5A468 /* Assets.xcassets in Resources */,
 				9B7843461D62EA0800F5A468 /* Main.storyboard in Resources */,
+				9B7843971D630A7700F5A468 /* CrowDiscoverCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,13 +482,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7843741D62F71700F5A468 /* NSObject+CrowParse.m in Sources */,
+				9B7843831D63019400F5A468 /* UIView+CrowMBProgressHUD.m in Sources */,
+				9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */,
+				9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */,
+				9B7843861D6302E100F5A468 /* CrowBaseNetworking.m in Sources */,
 				9B7843431D62EA0800F5A468 /* ViewController.m in Sources */,
+				9B78437D1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m in Sources */,
+				9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */,
 				9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */,
-				9B78436C1D62ECF400F5A468 /* DiscoverTableViewController.m in Sources */,
-				9B78435E1D62EC4300F5A468 /* DiscoverModel.m in Sources */,
-				9B7843611D62EC6F00F5A468 /* DiscoverViewModel.m in Sources */,
-				9B7843681D62ECCC00F5A468 /* DiscoverCell.m in Sources */,
+				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,
+				9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */,
+				9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */,
+				9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */,
+				9B7843AD1D630B5900F5A468 /* CrowMainPageModel.m in Sources */,
 				9B78433D1D62EA0800F5A468 /* main.m in Sources */,
+				9B7843961D630A7700F5A468 /* CrowDiscoverCell.m in Sources */,
+				9B7843801D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m in Sources */,
+				9B7843B01D630B6C00F5A468 /* CrowMainPageViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +512,7 @@
 				9B7843451D62EA0800F5A468 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9B7843491D62EA0800F5A468 /* LaunchScreen.storyboard */ = {
@@ -388,6 +521,7 @@
 				9B78434A1D62EA0800F5A468 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -478,6 +612,8 @@
 			baseConfigurationReference = C371663D6B1A633454B6CDB4 /* Pods-DaDaCook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = DaDaCook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +627,8 @@
 			baseConfigurationReference = 1DB581D4C32753D811D929B6 /* Pods-DaDaCook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = DaDaCook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
