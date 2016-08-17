@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sQ4-2c-7EI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="ojZ-9O-6gq">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="sQ4-2c-7EI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="home_unsel" selectedImage="home_sel" id="kiE-eD-TKO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i68-AB-ut6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AqC-q4-Gwi" kind="relationship" relationship="rootViewController" id="Tgf-3B-weV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfs-vs-Buj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.133333333333326" y="434.51999999999998"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="IdA-0G-rlm">
+            <objects>
+                <viewController id="AqC-q4-Gwi" customClass="CrowHomePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e2i-07-2ZH"/>
+                        <viewControllerLayoutGuide type="bottom" id="yAM-H3-wJu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jcI-9k-NhF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6O-Ya-G4A">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="ae4-fB-n3c" customClass="CrowHomePageHeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.89816352592500959" green="0.90436698717948716" blue="0.88289043334133621" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="L14-tO-ghX">
+                                        <rect key="frame" x="0.0" y="209" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L14-tO-ghX" id="5ck-Gi-fGP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wRe-l3-fP4">
+                                        <rect key="frame" x="0.0" y="253" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wRe-l3-fP4" id="TYQ-Go-Kod">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AqC-q4-Gwi" id="cbW-9F-OEd"/>
+                                    <outlet property="delegate" destination="AqC-q4-Gwi" id="wn0-Z5-k7X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d6O-Ya-G4A" firstAttribute="top" secondItem="e2i-07-2ZH" secondAttribute="bottom" id="4JY-6X-z0q"/>
+                            <constraint firstItem="d6O-Ya-G4A" firstAttribute="leading" secondItem="jcI-9k-NhF" secondAttribute="leading" id="5MS-LF-gX2"/>
+                            <constraint firstAttribute="trailing" secondItem="d6O-Ya-G4A" secondAttribute="trailing" id="QKb-DZ-oMz"/>
+                            <constraint firstItem="yAM-H3-wJu" firstAttribute="top" secondItem="d6O-Ya-G4A" secondAttribute="bottom" id="diN-z1-tEh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="nAK-AC-mte"/>
+                    <connections>
+                        <outlet property="headerView" destination="ae4-fB-n3c" id="5gu-Fk-REr"/>
+                        <outlet property="tableView" destination="d6O-Ya-G4A" id="G8b-s8-eLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wj-kF-emj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="434"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_sel" width="27" height="27"/>
+        <image name="home_unsel" width="27" height="27"/>
+    </resources>
+</document>

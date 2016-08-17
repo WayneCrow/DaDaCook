@@ -14,6 +14,18 @@
 
 @implementation CrowDiscoverTableViewController
 
+// 注意：控制器初始化
+// storyBoard初始化时，自动调用下方法，不走new初始化方法
+// 此方法 ViewController 初始化时触发
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        NSLog(@"initWithCoder 初始化");
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -29,6 +29,12 @@
 		9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */; };
 		9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */; };
 		9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */; };
+		9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035331D64363A00BFC90B /* Discover.storyboard */; };
+		9BD035361D64370500BFC90B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035351D64370500BFC90B /* Mine.storyboard */; };
+		9BD035381D64377700BFC90B /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035371D64377700BFC90B /* HomePage.storyboard */; };
+		9BD0353B1D643ACE00BFC90B /* CrowMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0353A1D643ACE00BFC90B /* CrowMainTabBarViewController.m */; };
+		9BD0353E1D644E9500BFC90B /* CrowHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0353D1D644E9500BFC90B /* CrowHomePageViewController.m */; };
+		9BD035411D64521B00BFC90B /* CrowHomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD035401D64521B00BFC90B /* CrowHomePageHeaderView.m */; };
 		9BD7DE071D631908001E3088 /* CrowHomePageHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */; };
 		9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE091D63191E001E3088 /* CrowHomePageModel.m */; };
 		9BD7DE0D1D631927001E3088 /* CrowHomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE0C1D631927001E3088 /* CrowHomePageViewModel.m */; };
@@ -78,6 +84,15 @@
 		9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMineTableViewController.m; sourceTree = "<group>"; };
 		9B7843B71D63121500F5A468 /* AppDelegate+Crow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Crow.h"; sourceTree = "<group>"; };
 		9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Crow.m"; sourceTree = "<group>"; };
+		9BD035331D64363A00BFC90B /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		9BD035351D64370500BFC90B /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		9BD035371D64377700BFC90B /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		9BD035391D643ACE00BFC90B /* CrowMainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMainTabBarViewController.h; sourceTree = "<group>"; };
+		9BD0353A1D643ACE00BFC90B /* CrowMainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMainTabBarViewController.m; sourceTree = "<group>"; };
+		9BD0353C1D644E9500BFC90B /* CrowHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageViewController.h; sourceTree = "<group>"; };
+		9BD0353D1D644E9500BFC90B /* CrowHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageViewController.m; sourceTree = "<group>"; };
+		9BD0353F1D64521B00BFC90B /* CrowHomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageHeaderView.h; sourceTree = "<group>"; };
+		9BD035401D64521B00BFC90B /* CrowHomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageHeaderView.m; sourceTree = "<group>"; };
 		9BD7DE041D631908001E3088 /* CrowHomePageHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageHeaderViewModel.h; sourceTree = "<group>"; };
 		9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageHeaderViewModel.m; sourceTree = "<group>"; };
 		9BD7DE081D63191E001E3088 /* CrowHomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageModel.h; sourceTree = "<group>"; };
@@ -173,6 +188,8 @@
 				9B7843A21D630AFA00F5A468 /* HomePage */,
 				9B7843531D62EBCE00F5A468 /* Discover */,
 				9B7843551D62EBCE00F5A468 /* Mine */,
+				9BD035391D643ACE00BFC90B /* CrowMainTabBarViewController.h */,
+				9BD0353A1D643ACE00BFC90B /* CrowMainTabBarViewController.m */,
 				9B78438A1D63098C00F5A468 /* CrowBaseViewModel.h */,
 				9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */,
 			);
@@ -186,6 +203,7 @@
 				9B78436F1D62ED3600F5A468 /* ViewModel */,
 				9B78436E1D62ED3100F5A468 /* View */,
 				9B78436D1D62ED2000F5A468 /* ViewController */,
+				9BD035331D64363A00BFC90B /* Discover.storyboard */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -197,6 +215,7 @@
 				9B7843A91D630B3600F5A468 /* ViewModel */,
 				9B7843A81D630B3100F5A468 /* View */,
 				9B7843A71D630B2900F5A468 /* ViewController */,
+				9BD035351D64370500BFC90B /* Mine.storyboard */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -308,6 +327,7 @@
 				9B7843A51D630B1C00F5A468 /* ViewModel */,
 				9B7843A41D630B1800F5A468 /* View */,
 				9B7843A31D630B0F00F5A468 /* ViewController */,
+				9BD035371D64377700BFC90B /* HomePage.storyboard */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -315,6 +335,8 @@
 		9B7843A31D630B0F00F5A468 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9BD0353C1D644E9500BFC90B /* CrowHomePageViewController.h */,
+				9BD0353D1D644E9500BFC90B /* CrowHomePageViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +344,8 @@
 		9B7843A41D630B1800F5A468 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BD0353F1D64521B00BFC90B /* CrowHomePageHeaderView.h */,
+				9BD035401D64521B00BFC90B /* CrowHomePageHeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -441,6 +465,9 @@
 			files = (
 				9B78434B1D62EA0800F5A468 /* LaunchScreen.storyboard in Resources */,
 				9B7843481D62EA0800F5A468 /* Assets.xcassets in Resources */,
+				9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */,
+				9BD035361D64370500BFC90B /* Mine.storyboard in Resources */,
+				9BD035381D64377700BFC90B /* HomePage.storyboard in Resources */,
 				9B7843461D62EA0800F5A468 /* Main.storyboard in Resources */,
 				9B7843971D630A7700F5A468 /* CrowDiscoverCell.xib in Resources */,
 			);
@@ -505,12 +532,15 @@
 				9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */,
 				9B7843831D63019400F5A468 /* UIView+CrowMBProgressHUD.m in Sources */,
 				9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */,
+				9BD0353E1D644E9500BFC90B /* CrowHomePageViewController.m in Sources */,
 				9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */,
 				9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */,
 				9BD7DE101D631979001E3088 /* CrowHomePageHeaderModel.m in Sources */,
+				9BD035411D64521B00BFC90B /* CrowHomePageHeaderView.m in Sources */,
 				9B7843861D6302E100F5A468 /* CrowBaseNetworking.m in Sources */,
 				9B7843431D62EA0800F5A468 /* ViewController.m in Sources */,
 				9B78437D1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m in Sources */,
+				9BD0353B1D643ACE00BFC90B /* CrowMainTabBarViewController.m in Sources */,
 				9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */,
 				9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */,
 				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,

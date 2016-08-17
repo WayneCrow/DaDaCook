@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rAM-dS-AgU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--我的-->
+        <scene sceneID="aRC-oJ-emE">
+            <objects>
+                <tableViewController id="cTR-Xc-FKX" customClass="CrowMineTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WUd-L0-BEh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="T6G-7r-pVb">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6G-7r-pVb" id="Zcf-NO-SOo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cTR-Xc-FKX" id="POG-Vq-kTI"/>
+                            <outlet property="delegate" destination="cTR-Xc-FKX" id="RZS-o7-MJk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="我的" id="98X-sh-c9b"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgz-nr-Fyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="15"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="Fc7-XI-3G4">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="rAM-dS-AgU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="my_unsel" selectedImage="my_sel" id="T7t-w7-wLH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ODF-Mu-TQH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cTR-Xc-FKX" kind="relationship" relationship="rootViewController" id="2Yr-R2-cVk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sR5-wN-KsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="my_sel" width="27" height="27"/>
+        <image name="my_unsel" width="27" height="27"/>
+    </resources>
+</document>
