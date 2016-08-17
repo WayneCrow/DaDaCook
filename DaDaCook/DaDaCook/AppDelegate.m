@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CrowNetManager.h"
 
 @interface AppDelegate ()
 

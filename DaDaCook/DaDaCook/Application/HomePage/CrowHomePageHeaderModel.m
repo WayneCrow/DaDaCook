@@ -32,7 +32,7 @@
     return @{
              @"focusId" : @"focus_id",
              @"jumpURL" : @"jump_url",
-            @"imageURL" : @"imageURL",
+            @"imageURL" : @"image_url",
                  @"des" : @"description",
              };
 }
