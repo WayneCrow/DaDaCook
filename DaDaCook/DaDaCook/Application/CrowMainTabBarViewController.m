@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBar.tintColor = [UIColor orangeColor];
+//    self.tabBar.tintColor = kRGBA(242, 114, 66, 1);
     
     id homePageNavi = [[UIStoryboard storyboardWithName:@"HomePage" bundle:nil] instantiateInitialViewController];
     id discoverNavi = [[UIStoryboard storyboardWithName:@"Discover" bundle:nil] instantiateInitialViewController];

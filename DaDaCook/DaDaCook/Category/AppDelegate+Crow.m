@@ -26,6 +26,8 @@
     
     [UIImageView appearance].contentMode   = UIViewContentModeScaleAspectFill;
     [UIImageView appearance].clipsToBounds = YES;
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kRGBA(242, 114, 66, 1)} forState:UIControlStateSelected];
 }
 
 - (BOOL)isOnline {

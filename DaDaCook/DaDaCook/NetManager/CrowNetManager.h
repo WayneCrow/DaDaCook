@@ -8,6 +8,7 @@
 
 #import "CrowBaseNetworking.h"
 #import "CrowHomePageHeaderModel.h"
+#import "CrowHomePageActivtyModel.h"
 
 @interface CrowNetManager : CrowBaseNetworking
 
@@ -17,5 +18,8 @@
 
 // 头部广告
 + (id)postHomePageHeaderAdCompletionHandler:(void(^)(CrowHomePageHeaderModel *model, NSError *error))completionHandler;
+
+// 头部活动
++ (id)postHomePageActivityCompletionHandler:(void(^)(CrowHomePageActivtyModel *model, NSError *error))completionHandler;
 
 @end

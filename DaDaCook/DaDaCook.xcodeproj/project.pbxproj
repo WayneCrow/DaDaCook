@@ -29,6 +29,8 @@
 		9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */; };
 		9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */; };
 		9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */; };
+		9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */; };
+		9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */; };
 		9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035331D64363A00BFC90B /* Discover.storyboard */; };
 		9BD035361D64370500BFC90B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035351D64370500BFC90B /* Mine.storyboard */; };
 		9BD035381D64377700BFC90B /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035371D64377700BFC90B /* HomePage.storyboard */; };
@@ -84,6 +86,10 @@
 		9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMineTableViewController.m; sourceTree = "<group>"; };
 		9B7843B71D63121500F5A468 /* AppDelegate+Crow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Crow.h"; sourceTree = "<group>"; };
 		9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Crow.m"; sourceTree = "<group>"; };
+		9B939B3B1D65919F00DCDD7E /* CrowHomePageActivtyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivtyModel.h; sourceTree = "<group>"; };
+		9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageActivtyModel.m; sourceTree = "<group>"; };
+		9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivityViewModel.h; sourceTree = "<group>"; };
+		9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageActivityViewModel.m; sourceTree = "<group>"; };
 		9BD035331D64363A00BFC90B /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		9BD035351D64370500BFC90B /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9BD035371D64377700BFC90B /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -355,6 +361,8 @@
 			children = (
 				9BD7DE041D631908001E3088 /* CrowHomePageHeaderViewModel.h */,
 				9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */,
+				9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */,
+				9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */,
 				9BD7DE0B1D631927001E3088 /* CrowHomePageViewModel.h */,
 				9BD7DE0C1D631927001E3088 /* CrowHomePageViewModel.m */,
 			);
@@ -366,6 +374,8 @@
 			children = (
 				9BD7DE0E1D631979001E3088 /* CrowHomePageHeaderModel.h */,
 				9BD7DE0F1D631979001E3088 /* CrowHomePageHeaderModel.m */,
+				9B939B3B1D65919F00DCDD7E /* CrowHomePageActivtyModel.h */,
+				9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */,
 				9BD7DE081D63191E001E3088 /* CrowHomePageModel.h */,
 				9BD7DE091D63191E001E3088 /* CrowHomePageModel.m */,
 			);
@@ -534,6 +544,7 @@
 				9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */,
 				9BD0353E1D644E9500BFC90B /* CrowHomePageViewController.m in Sources */,
 				9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */,
+				9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */,
 				9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */,
 				9BD7DE101D631979001E3088 /* CrowHomePageHeaderModel.m in Sources */,
 				9BD035411D64521B00BFC90B /* CrowHomePageHeaderView.m in Sources */,
@@ -543,6 +554,7 @@
 				9BD0353B1D643ACE00BFC90B /* CrowMainTabBarViewController.m in Sources */,
 				9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */,
 				9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */,
+				9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */,
 				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,
 				9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */,
 				9BD7DE0D1D631927001E3088 /* CrowHomePageViewModel.m in Sources */,

@@ -13,14 +13,22 @@
 - (void)getDataWithMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler {
     
     self.dataTask = [CrowNetManager postHomePageHeaderAdCompletionHandler:^(CrowHomePageHeaderModel *model, NSError *error) {
+        
         if (!error) {
+            
+            if (requestMode == RequestModeRefresh) {
+                [self.dataList removeAllObjects];
+            }
+            
             [self.dataList addObjectsFromArray:model.data.list];
         }
         !completionHandler ?: completionHandler(error);
     }];
 }
 
-- (NSInteger)adNumber {
+#pragma mark - Method(方法)
+
+- (NSInteger)headNumber {
     return self.dataList.count;
 }
 

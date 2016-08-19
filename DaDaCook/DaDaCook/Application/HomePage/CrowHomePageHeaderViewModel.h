@@ -10,7 +10,7 @@
 
 @interface CrowHomePageHeaderViewModel : CrowBaseViewModel
 
-@property (nonatomic) NSInteger adNumber;
+@property (nonatomic) NSInteger headNumber;
 - (NSURL *)imageForItem:(NSInteger)item;
 - (NSURL *)urlForItem:(NSInteger)item;
 
