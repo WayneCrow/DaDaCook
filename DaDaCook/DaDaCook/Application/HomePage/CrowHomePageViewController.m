@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 // tableView 的头部视图没有复用问题，可以直接拖入VC
 @property (weak, nonatomic) IBOutlet CrowHomePageHeaderView *headerView;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *activityButton;
 
 @property (nonatomic) CrowHomePageHeaderViewModel *headVM;
 @property (nonatomic) CrowHomePageActivityViewModel *activityVM;
@@ -39,33 +38,20 @@
             
             [weakSelf.headVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
                 
-                for (int index = 0; index < self.activityVM.numberOfButton; index++) {
-                    
-                    UIButton* button = [self.activityButton objectAtIndexedSubscript:index];
-                    
-                    if ([self.activityVM isOnlyImage:index]) {
-                        [button setBackgroundImageWithURL:[self.activityVM imageURLForItem:index] forState:UIControlStateNormal placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
-                    }
-                    else {
-                        [button.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                            make.top.equalTo(20);
-                            make.centerX.equalTo(0);
-                            make.height.equalTo(20);
-                        }];
-                        [button setImageWithURL:[self.activityVM imageURLForItem:index] forState:UIControlStateNormal placeholder:[UIImage imageNamed:@"defaultimage_small"]];
-                        button.imageView.contentMode = UIViewContentModeScaleAspectFit;
-                        
-                        [button.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                            make.centerX.equalTo(button);
-                            make.bottom.equalTo(button.mas_bottom).equalTo(20);
-                        }];
-                        [button setTitle:[self.activityVM titleForItem:index] forState:UIControlStateNormal];
-                        button.titleLabel.textAlignment = NSTextAlignmentCenter;
-                        button.titleLabel.font          = [UIFont systemFontOfSize:12];
-                        
-                        [button layoutButtonWithEdgeInsetsStyle:ButtonEdgeInsetsStyleTop imageTitleSpace:-6];
-                    }
-                }
+//                for (int index = 0; index < self.activityVM.numberOfButton; index++) {
+//                    
+//                    UIImageView* button = [weakSelf.test objectAtIndexedSubscript:index];
+//                    
+//                    if ([self.activityVM isOnlyImage:index]) {
+//                        [button setImageWithURL:[self.activityVM imageURLForItem:index] placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
+//                    }
+//                    else {
+//                        
+//                        [button setImageWithURL:[self.activityVM imageURLForItem:index] placeholder:nil];
+//                        
+//                        
+//                    }
+//                }
                 
                 [weakSelf.headerView reloadData];
                 [weakSelf.tableView endHeaderRefresh];
@@ -93,6 +79,21 @@
 
 - (void)homePageHeadView:(CrowHomePageHeaderView *)headView didSelectedItemAtIndex:(NSInteger)index {
     NSLog(@"Click Ad = %ld", index);
+}
+
+- (NSURL *)homePageHeadView:(CrowHomePageHeaderView *)headView activityImageURLForIndex:(NSInteger)index {
+    return [self.activityVM imageURLForItem:index];
+}
+
+- (NSString *)homePageHeadView:(CrowHomePageHeaderView *)headView activityTitleForIndex:(NSInteger)index {
+    if (![self.activityVM isOnlyImage:index]) {
+        return [self.activityVM titleForItem:index];
+    }
+    return nil;
+}
+
+- (void)homePageHeadView:(CrowHomePageHeaderView *)headView didSelectedItemActivityAtIndex:(NSInteger)index {
+    NSLog(@"Click Activity = %ld", index);
 }
 
 #pragma mark - TableView DataSource

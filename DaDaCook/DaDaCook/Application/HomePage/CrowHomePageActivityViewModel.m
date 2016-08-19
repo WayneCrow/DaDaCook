@@ -29,7 +29,7 @@
 
 #pragma mark - Method(方法)
 
-- (NSInteger)numberOfButton {
+- (NSInteger)numberOfControl {
     return self.dataList.count;
 }
 
@@ -47,19 +47,6 @@
 
 - (BOOL)isOnlyImage:(NSInteger)index {
     return (self.dataList[index].type == 1) ? YES : NO;
-}
-
-- (UIButton *)isOnlyImage:(ButtonType)buttonType button:(NSArray<UIButton *> *)buttons numberOfButton:(NSInteger)number {
-    if (buttonType == ButtonTypeImageTitle) {
-        buttons[number].titleLabel.text = self.dataList[number].content;
-        [buttons[number].imageView setImageURL:self.dataList[number].imageUrl.crow_URL];
-
-        [buttons[number] layoutButtonWithEdgeInsetsStyle:ButtonEdgeInsetsStyleTop imageTitleSpace:6];
-    }
-    else {
-        [buttons[number].imageView setImageURL:self.dataList[number].imageUrl.crow_URL];
-    }
-    return nil;
 }
 
 #pragma mark - LazyLoad (懒加载)

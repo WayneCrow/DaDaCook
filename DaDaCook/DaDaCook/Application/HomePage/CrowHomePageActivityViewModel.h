@@ -8,17 +8,16 @@
 
 #import "CrowBaseViewModel.h"
 
-typedef NS_ENUM(NSUInteger, ButtonType) {
-    ButtonTypeImageTitle,
-    ButtonTypeImage,
+typedef NS_ENUM(NSUInteger, ControlType) {
+    ControlTypeImageTitle,
+    ControlTypeImage,
 };
 
 @interface CrowHomePageActivityViewModel : CrowBaseViewModel
 
-@property (nonatomic) NSInteger numberOfButton;
+@property (nonatomic) NSInteger numberOfControl;
 - (NSURL *)imageURLForItem:(NSInteger)index;
 - (NSString *)titleForItem:(NSInteger)index;
-- (NSInteger)buttonType:(NSInteger)index;
 - (BOOL)isOnlyImage:(NSInteger)index;
 
 @property (nonatomic) NSMutableArray<CrowHomePageActivtyDataListModel *> *dataList;

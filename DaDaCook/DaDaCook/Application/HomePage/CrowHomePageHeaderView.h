@@ -18,6 +18,9 @@
 - (NSInteger)homePageHeaderNumberOfItems:(CrowHomePageHeaderView *)headView;
 - (NSURL *)homePageHeadView:(CrowHomePageHeaderView *)headView imageURLForIndex:(NSInteger)index;
 
+- (NSURL *)homePageHeadView:(CrowHomePageHeaderView *)headView activityImageURLForIndex:(NSInteger)index;
+- (NSString *)homePageHeadView:(CrowHomePageHeaderView *)headView activityTitleForIndex:(NSInteger)index;
+
 @end
 
 @protocol HomePageHeadDelegate <NSObject>
@@ -25,6 +28,8 @@
 @optional
 
 - (void)homePageHeadView:(CrowHomePageHeaderView *)headView didSelectedItemAtIndex:(NSInteger)index;
+
+- (void)homePageHeadView:(CrowHomePageHeaderView *)headView didSelectedItemActivityAtIndex:(NSInteger)index;
 
 @end
 
@@ -41,5 +46,7 @@
 @property (nonatomic) NSTimer        *timer;
 @property (nonatomic) BOOL           autoScroll;
 @property (nonatomic) NSTimeInterval duration;
+
+@property (nonatomic) NSArray<UIControl *> *headControls;
 
 @end

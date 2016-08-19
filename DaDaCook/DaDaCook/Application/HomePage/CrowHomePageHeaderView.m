@@ -31,6 +31,26 @@
         self.pageControl.numberOfPages = [_dataSource homePageHeaderNumberOfItems:self];
     }
     [self.ic reloadData];
+    
+    [self.headControls enumerateObjectsUsingBlock:^(UIControl * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        UIImageView *imageView = [obj viewWithTag:201];
+        if ([_dataSource respondsToSelector:@selector(homePageHeadView:activityImageURLForIndex:)]) {
+            [imageView setImageWithURL:[_dataSource homePageHeadView:self activityImageURLForIndex:idx] placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
+        }
+        
+        UILabel *label = [obj viewWithTag:202];
+        label.text = nil;
+        if ([_dataSource respondsToSelector:@selector(homePageHeadView:activityTitleForIndex:)]) {
+            label.text = [_dataSource homePageHeadView:self activityTitleForIndex:idx];
+        }
+        [obj bk_addEventHandler:^(id sender) {
+            if ([_delegate respondsToSelector:@selector(homePageHeadView:didSelectedItemActivityAtIndex:)]) {
+                [_delegate homePageHeadView:self didSelectedItemActivityAtIndex:idx];
+            }
+        } forControlEvents:UIControlEventTouchUpInside];
+        
+    }];
 }
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
@@ -96,6 +116,13 @@
         _pageControl = [self viewWithTag:200];
     }
     return _pageControl;
+}
+
+- (NSArray<UIControl *> *)headControls {
+    if(_headControls == nil) {
+        _headControls = @[[self viewWithTag:2001], [self viewWithTag:2002], [self viewWithTag:2003], [self viewWithTag:2004], [self viewWithTag:2005], [self viewWithTag:2006]];
+    }
+    return _headControls;
 }
 
 @end
