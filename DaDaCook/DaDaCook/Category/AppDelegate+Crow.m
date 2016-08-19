@@ -24,14 +24,27 @@
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
+    // 添加日志功能
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     [UIImageView appearance].contentMode   = UIViewContentModeScaleAspectFill;
     [UIImageView appearance].clipsToBounds = YES;
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kRGBA(242, 114, 66, 1)} forState:UIControlStateSelected];
+    
+    [self configGlobalUI];
 }
 
 - (BOOL)isOnline {
     return [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN || [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi;
+}
+
+- (void)configGlobalUI {
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: kRGBA(242, 114, 66, 1)} forState:UIControlStateSelected];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

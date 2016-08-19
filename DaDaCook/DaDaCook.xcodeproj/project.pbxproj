@@ -31,6 +31,7 @@
 		9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */; };
 		9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */; };
 		9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */; };
+		9BB0DDA91D670D1F00DC767D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BB0DDAB1D670D1F00DC767D /* InfoPlist.strings */; };
 		9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035331D64363A00BFC90B /* Discover.storyboard */; };
 		9BD035361D64370500BFC90B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035351D64370500BFC90B /* Mine.storyboard */; };
 		9BD035381D64377700BFC90B /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035371D64377700BFC90B /* HomePage.storyboard */; };
@@ -39,7 +40,6 @@
 		9BD035411D64521B00BFC90B /* CrowHomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD035401D64521B00BFC90B /* CrowHomePageHeaderView.m */; };
 		9BD7DE071D631908001E3088 /* CrowHomePageHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */; };
 		9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE091D63191E001E3088 /* CrowHomePageModel.m */; };
-		9BD7DE0D1D631927001E3088 /* CrowHomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE0C1D631927001E3088 /* CrowHomePageViewModel.m */; };
 		9BD7DE101D631979001E3088 /* CrowHomePageHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7DE0F1D631979001E3088 /* CrowHomePageHeaderModel.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +90,11 @@
 		9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageActivtyModel.m; sourceTree = "<group>"; };
 		9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivityViewModel.h; sourceTree = "<group>"; };
 		9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageActivityViewModel.m; sourceTree = "<group>"; };
+		9BB0DDA51D670CC600DC767D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9BB0DDA61D670CC600DC767D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9BB0DDAA1D670D1F00DC767D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BB0DDAC1D670D2000DC767D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BB0DDAD1D670D2100DC767D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9BD035331D64363A00BFC90B /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		9BD035351D64370500BFC90B /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9BD035371D64377700BFC90B /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -103,8 +108,6 @@
 		9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageHeaderViewModel.m; sourceTree = "<group>"; };
 		9BD7DE081D63191E001E3088 /* CrowHomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageModel.h; sourceTree = "<group>"; };
 		9BD7DE091D63191E001E3088 /* CrowHomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageModel.m; sourceTree = "<group>"; };
-		9BD7DE0B1D631927001E3088 /* CrowHomePageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageViewModel.h; sourceTree = "<group>"; };
-		9BD7DE0C1D631927001E3088 /* CrowHomePageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageViewModel.m; sourceTree = "<group>"; };
 		9BD7DE0E1D631979001E3088 /* CrowHomePageHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageHeaderModel.h; sourceTree = "<group>"; };
 		9BD7DE0F1D631979001E3088 /* CrowHomePageHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageHeaderModel.m; sourceTree = "<group>"; };
 		9BD7DE121D631BBE001E3088 /* Constans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constans.h; sourceTree = "<group>"; };
@@ -271,6 +274,7 @@
 				9B7843441D62EA0800F5A468 /* Main.storyboard */,
 				9B7843471D62EA0800F5A468 /* Assets.xcassets */,
 				9B7843491D62EA0800F5A468 /* LaunchScreen.storyboard */,
+				9BB0DDAB1D670D1F00DC767D /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -363,8 +367,6 @@
 				9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */,
 				9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */,
 				9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */,
-				9BD7DE0B1D631927001E3088 /* CrowHomePageViewModel.h */,
-				9BD7DE0C1D631927001E3088 /* CrowHomePageViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 9B78432F1D62EA0800F5A468;
 			productRefGroup = 9B7843391D62EA0800F5A468 /* Products */;
@@ -474,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B78434B1D62EA0800F5A468 /* LaunchScreen.storyboard in Resources */,
+				9BB0DDA91D670D1F00DC767D /* InfoPlist.strings in Resources */,
 				9B7843481D62EA0800F5A468 /* Assets.xcassets in Resources */,
 				9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */,
 				9BD035361D64370500BFC90B /* Mine.storyboard in Resources */,
@@ -557,7 +561,6 @@
 				9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */,
 				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,
 				9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */,
-				9BD7DE0D1D631927001E3088 /* CrowHomePageViewModel.m in Sources */,
 				9BD7DE071D631908001E3088 /* CrowHomePageHeaderViewModel.m in Sources */,
 				9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */,
 				9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */,
@@ -574,6 +577,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B7843451D62EA0800F5A468 /* Base */,
+				9BB0DDA51D670CC600DC767D /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			path = ..;
@@ -583,9 +587,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B78434A1D62EA0800F5A468 /* Base */,
+				9BB0DDA61D670CC600DC767D /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		9BB0DDAB1D670D1F00DC767D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BB0DDAA1D670D1F00DC767D /* Base */,
+				9BB0DDAC1D670D2000DC767D /* en */,
+				9BB0DDAD1D670D2100DC767D /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

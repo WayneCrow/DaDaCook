@@ -14,10 +14,21 @@
 
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
+
 #import <AFNetworking.h>
+#import <UIKit+AFNetworking.h>
 #import <AFNetworkActivityIndicatorManager.h>
+
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
+
+#import <CocoaLumberjack.h>
+#ifdef DEBUG
+static const NSUInteger ddLogLevel = DDLogLevelAll;
+#else
+static const NSUInteger ddLogLevel = DDLogLevelError;
+#endif
+
 #import <iCarousel.h>
 #import <MBProgressHUD.h>
 #import <MJRefresh.h>
