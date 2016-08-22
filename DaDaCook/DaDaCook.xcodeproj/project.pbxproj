@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		044D3F3C68BEEBDEDDB01BF7 /* libPods-DaDaCook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEDAD6F36C7EBFE68B8FB2F /* libPods-DaDaCook.a */; };
+		9B11E7191D67FEFB0098A952 /* CrowMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B11E7181D67FEFB0098A952 /* CrowMineViewController.m */; };
 		9B78433D1D62EA0800F5A468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78433C1D62EA0800F5A468 /* main.m */; };
 		9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78433F1D62EA0800F5A468 /* AppDelegate.m */; };
 		9B7843431D62EA0800F5A468 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843421D62EA0800F5A468 /* ViewController.m */; };
@@ -27,7 +28,6 @@
 		9B7843971D630A7700F5A468 /* CrowDiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843951D630A7700F5A468 /* CrowDiscoverCell.xib */; };
 		9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */; };
 		9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */; };
-		9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */; };
 		9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */; };
 		9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */; };
 		9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */; };
@@ -46,6 +46,8 @@
 /* Begin PBXFileReference section */
 		1CEDAD6F36C7EBFE68B8FB2F /* libPods-DaDaCook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaDaCook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB581D4C32753D811D929B6 /* Pods-DaDaCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaDaCook.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaDaCook/Pods-DaDaCook.release.xcconfig"; sourceTree = "<group>"; };
+		9B11E7171D67FEFB0098A952 /* CrowMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMineViewController.h; sourceTree = "<group>"; };
+		9B11E7181D67FEFB0098A952 /* CrowMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMineViewController.m; sourceTree = "<group>"; };
 		9B7843381D62EA0800F5A468 /* DaDaCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaDaCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B78433C1D62EA0800F5A468 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B78433E1D62EA0800F5A468 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,8 +84,6 @@
 		9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverViewModel.m; sourceTree = "<group>"; };
 		9B78439B1D630AB000F5A468 /* CrowDiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverModel.h; sourceTree = "<group>"; };
 		9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverModel.m; sourceTree = "<group>"; };
-		9B7843B11D630C2D00F5A468 /* CrowMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowMineTableViewController.h; sourceTree = "<group>"; };
-		9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowMineTableViewController.m; sourceTree = "<group>"; };
 		9B7843B71D63121500F5A468 /* AppDelegate+Crow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Crow.h"; sourceTree = "<group>"; };
 		9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Crow.m"; sourceTree = "<group>"; };
 		9B939B3B1D65919F00DCDD7E /* CrowHomePageActivtyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivtyModel.h; sourceTree = "<group>"; };
@@ -387,8 +387,8 @@
 		9B7843A71D630B2900F5A468 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9B7843B11D630C2D00F5A468 /* CrowMineTableViewController.h */,
-				9B7843B21D630C2D00F5A468 /* CrowMineTableViewController.m */,
+				9B11E7171D67FEFB0098A952 /* CrowMineViewController.h */,
+				9B11E7181D67FEFB0098A952 /* CrowMineViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -549,7 +549,6 @@
 				9BD0353E1D644E9500BFC90B /* CrowHomePageViewController.m in Sources */,
 				9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */,
 				9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */,
-				9B7843B31D630C2D00F5A468 /* CrowMineTableViewController.m in Sources */,
 				9BD7DE101D631979001E3088 /* CrowHomePageHeaderModel.m in Sources */,
 				9BD035411D64521B00BFC90B /* CrowHomePageHeaderView.m in Sources */,
 				9B7843861D6302E100F5A468 /* CrowBaseNetworking.m in Sources */,
@@ -562,6 +561,7 @@
 				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,
 				9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */,
 				9BD7DE071D631908001E3088 /* CrowHomePageHeaderViewModel.m in Sources */,
+				9B11E7191D67FEFB0098A952 /* CrowMineViewController.m in Sources */,
 				9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */,
 				9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */,
 				9B78433D1D62EA0800F5A468 /* main.m in Sources */,
