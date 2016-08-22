@@ -22,13 +22,16 @@
 		9B7843831D63019400F5A468 /* UIView+CrowMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843821D63019400F5A468 /* UIView+CrowMBProgressHUD.m */; };
 		9B7843861D6302E100F5A468 /* CrowBaseNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843851D6302E100F5A468 /* CrowBaseNetworking.m */; };
 		9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843881D63096400F5A468 /* CrowNetManager.m */; };
-		9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */; };
 		9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78438E1D630A4900F5A468 /* CrowDiscoverTableViewController.m */; };
 		9B7843961D630A7700F5A468 /* CrowDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843941D630A7700F5A468 /* CrowDiscoverCell.m */; };
 		9B7843971D630A7700F5A468 /* CrowDiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7843951D630A7700F5A468 /* CrowDiscoverCell.xib */; };
 		9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843991D630A9A00F5A468 /* CrowDiscoverViewModel.m */; };
 		9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */; };
 		9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */; };
+		9B7DA28C1D6A851B0048BDAE /* CrowBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7DA28B1D6A851B0048BDAE /* CrowBaseViewModel.m */; };
+		9B7DA28F1D6A8D320048BDAE /* CrowHomePageCookerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7DA28E1D6A8D320048BDAE /* CrowHomePageCookerModel.m */; };
+		9B7DA2921D6A93410048BDAE /* CrowHomePageCookerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7DA2911D6A93410048BDAE /* CrowHomePageCookerViewModel.m */; };
+		9B7DA2951D6A99B80048BDAE /* CrowHomePageDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7DA2941D6A99B80048BDAE /* CrowHomePageDetailCell.m */; };
 		9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */; };
 		9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */; };
 		9BB0DDA91D670D1F00DC767D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BB0DDAB1D670D1F00DC767D /* InfoPlist.strings */; };
@@ -73,8 +76,6 @@
 		9B7843851D6302E100F5A468 /* CrowBaseNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowBaseNetworking.m; sourceTree = "<group>"; };
 		9B7843871D63096400F5A468 /* CrowNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowNetManager.h; sourceTree = "<group>"; };
 		9B7843881D63096400F5A468 /* CrowNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowNetManager.m; sourceTree = "<group>"; };
-		9B78438A1D63098C00F5A468 /* CrowBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowBaseViewModel.h; sourceTree = "<group>"; };
-		9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowBaseViewModel.m; sourceTree = "<group>"; };
 		9B78438D1D630A4900F5A468 /* CrowDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverTableViewController.h; sourceTree = "<group>"; };
 		9B78438E1D630A4900F5A468 /* CrowDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverTableViewController.m; sourceTree = "<group>"; };
 		9B7843931D630A7700F5A468 /* CrowDiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowDiscoverCell.h; sourceTree = "<group>"; };
@@ -86,6 +87,14 @@
 		9B78439C1D630AB000F5A468 /* CrowDiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowDiscoverModel.m; sourceTree = "<group>"; };
 		9B7843B71D63121500F5A468 /* AppDelegate+Crow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Crow.h"; sourceTree = "<group>"; };
 		9B7843B81D63121500F5A468 /* AppDelegate+Crow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Crow.m"; sourceTree = "<group>"; };
+		9B7DA28A1D6A851B0048BDAE /* CrowBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowBaseViewModel.h; sourceTree = "<group>"; };
+		9B7DA28B1D6A851B0048BDAE /* CrowBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowBaseViewModel.m; sourceTree = "<group>"; };
+		9B7DA28D1D6A8D320048BDAE /* CrowHomePageCookerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageCookerModel.h; sourceTree = "<group>"; };
+		9B7DA28E1D6A8D320048BDAE /* CrowHomePageCookerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageCookerModel.m; sourceTree = "<group>"; };
+		9B7DA2901D6A93410048BDAE /* CrowHomePageCookerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageCookerViewModel.h; sourceTree = "<group>"; };
+		9B7DA2911D6A93410048BDAE /* CrowHomePageCookerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageCookerViewModel.m; sourceTree = "<group>"; };
+		9B7DA2931D6A99B80048BDAE /* CrowHomePageDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageDetailCell.h; sourceTree = "<group>"; };
+		9B7DA2941D6A99B80048BDAE /* CrowHomePageDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageDetailCell.m; sourceTree = "<group>"; };
 		9B939B3B1D65919F00DCDD7E /* CrowHomePageActivtyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivtyModel.h; sourceTree = "<group>"; };
 		9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageActivtyModel.m; sourceTree = "<group>"; };
 		9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageActivityViewModel.h; sourceTree = "<group>"; };
@@ -174,7 +183,7 @@
 				9B7843571D62EBCE00F5A468 /* Define */,
 				9B7843581D62EBCE00F5A468 /* NetManager */,
 				9B7843591D62EBCE00F5A468 /* Resource */,
-				9B78435A1D62EBCE00F5A468 /* Tool */,
+				9B7DA2891D6A851B0048BDAE /* Tool */,
 				9B78435B1D62EBCE00F5A468 /* Vendor */,
 				9B78433B1D62EA0800F5A468 /* Supporting Files */,
 			);
@@ -199,8 +208,6 @@
 				9B7843551D62EBCE00F5A468 /* Mine */,
 				9BD035391D643ACE00BFC90B /* CrowMainTabBarViewController.h */,
 				9BD0353A1D643ACE00BFC90B /* CrowMainTabBarViewController.m */,
-				9B78438A1D63098C00F5A468 /* CrowBaseViewModel.h */,
-				9B78438B1D63098C00F5A468 /* CrowBaseViewModel.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -279,13 +286,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		9B78435A1D62EBCE00F5A468 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		9B78435B1D62EBCE00F5A468 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +356,8 @@
 			children = (
 				9BD0353F1D64521B00BFC90B /* CrowHomePageHeaderView.h */,
 				9BD035401D64521B00BFC90B /* CrowHomePageHeaderView.m */,
+				9B7DA2931D6A99B80048BDAE /* CrowHomePageDetailCell.h */,
+				9B7DA2941D6A99B80048BDAE /* CrowHomePageDetailCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -367,6 +369,8 @@
 				9BD7DE051D631908001E3088 /* CrowHomePageHeaderViewModel.m */,
 				9B939B3E1D65939E00DCDD7E /* CrowHomePageActivityViewModel.h */,
 				9B939B3F1D65939E00DCDD7E /* CrowHomePageActivityViewModel.m */,
+				9B7DA2901D6A93410048BDAE /* CrowHomePageCookerViewModel.h */,
+				9B7DA2911D6A93410048BDAE /* CrowHomePageCookerViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -378,6 +382,8 @@
 				9BD7DE0F1D631979001E3088 /* CrowHomePageHeaderModel.m */,
 				9B939B3B1D65919F00DCDD7E /* CrowHomePageActivtyModel.h */,
 				9B939B3C1D65919F00DCDD7E /* CrowHomePageActivtyModel.m */,
+				9B7DA28D1D6A8D320048BDAE /* CrowHomePageCookerModel.h */,
+				9B7DA28E1D6A8D320048BDAE /* CrowHomePageCookerModel.m */,
 				9BD7DE081D63191E001E3088 /* CrowHomePageModel.h */,
 				9BD7DE091D63191E001E3088 /* CrowHomePageModel.m */,
 			);
@@ -412,6 +418,15 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		9B7DA2891D6A851B0048BDAE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9B7DA28A1D6A851B0048BDAE /* CrowBaseViewModel.h */,
+				9B7DA28B1D6A851B0048BDAE /* CrowBaseViewModel.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,9 +559,11 @@
 			files = (
 				9B7843741D62F71700F5A468 /* NSObject+CrowParse.m in Sources */,
 				9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */,
+				9B7DA2921D6A93410048BDAE /* CrowHomePageCookerViewModel.m in Sources */,
 				9B7843831D63019400F5A468 /* UIView+CrowMBProgressHUD.m in Sources */,
 				9B78438F1D630A4900F5A468 /* CrowDiscoverTableViewController.m in Sources */,
 				9BD0353E1D644E9500BFC90B /* CrowHomePageViewController.m in Sources */,
+				9B7DA28F1D6A8D320048BDAE /* CrowHomePageCookerModel.m in Sources */,
 				9BD7DE0A1D63191E001E3088 /* CrowHomePageModel.m in Sources */,
 				9B939B3D1D65919F00DCDD7E /* CrowHomePageActivtyModel.m in Sources */,
 				9BD7DE101D631979001E3088 /* CrowHomePageHeaderModel.m in Sources */,
@@ -555,16 +572,17 @@
 				9B7843431D62EA0800F5A468 /* ViewController.m in Sources */,
 				9B78437D1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m in Sources */,
 				9BD0353B1D643ACE00BFC90B /* CrowMainTabBarViewController.m in Sources */,
+				9B7DA2951D6A99B80048BDAE /* CrowHomePageDetailCell.m in Sources */,
 				9B78439A1D630A9A00F5A468 /* CrowDiscoverViewModel.m in Sources */,
 				9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */,
 				9B939B401D65939E00DCDD7E /* CrowHomePageActivityViewModel.m in Sources */,
 				9B78439D1D630AB000F5A468 /* CrowDiscoverModel.m in Sources */,
-				9B78438C1D63098C00F5A468 /* CrowBaseViewModel.m in Sources */,
 				9BD7DE071D631908001E3088 /* CrowHomePageHeaderViewModel.m in Sources */,
 				9B11E7191D67FEFB0098A952 /* CrowMineViewController.m in Sources */,
 				9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */,
 				9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */,
 				9B78433D1D62EA0800F5A468 /* main.m in Sources */,
+				9B7DA28C1D6A851B0048BDAE /* CrowBaseViewModel.m in Sources */,
 				9B7843961D630A7700F5A468 /* CrowDiscoverCell.m in Sources */,
 				9B7843801D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m in Sources */,
 			);

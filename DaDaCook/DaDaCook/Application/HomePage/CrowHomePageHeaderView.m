@@ -53,14 +53,14 @@
     }];
 }
 
+#pragma mark - ic DataSource
+
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
     if ([_dataSource respondsToSelector:@selector(homePageHeaderNumberOfItems:)]) {
         return [_dataSource homePageHeaderNumberOfItems:self];
     }
     return 0;
 }
-
-#pragma mark - ic DataSource
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(nullable UIView *)view {
     

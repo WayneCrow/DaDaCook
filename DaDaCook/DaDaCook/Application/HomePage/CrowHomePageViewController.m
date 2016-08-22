@@ -10,8 +10,10 @@
 #import "CrowHomePageHeaderViewModel.h"
 #import "CrowHomePageHeaderView.h"
 #import "CrowHomePageActivityViewModel.h"
+#import "CrowHomePageCookerViewModel.h"
+#import "CrowHomePageDetailCell.h"
 
-@interface CrowHomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageHeadDelegate, HomePageHeadDataSource>
+@interface CrowHomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageHeadDelegate, HomePageHeadDataSource, HomePageDetailCellDelegate, HomePageDetailCellDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 // tableView 的头部视图没有复用问题，可以直接拖入VC
@@ -19,6 +21,7 @@
 
 @property (nonatomic) CrowHomePageHeaderViewModel *headVM;
 @property (nonatomic) CrowHomePageActivityViewModel *activityVM;
+@property (nonatomic) CrowHomePageCookerViewModel *cookerVM;
 
 @end
 
@@ -27,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self.tableView registerNib:[UINib nibWithNibName:@"CrowHomePageDetailCell" bundle:nil] forCellReuseIdentifier:@"CrowHomePageDetailCell"];
+    
     _headerView.delegate   = self;
     _headerView.dataSource = self;
     
@@ -34,32 +39,30 @@
     
     [self.tableView addHeaderRefresh:^{
         
-        [weakSelf.activityVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
+        [weakSelf.cookerVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
             
-            [weakSelf.headVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
+            [weakSelf.activityVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
                 
-//                for (int index = 0; index < self.activityVM.numberOfButton; index++) {
-//                    
-//                    UIImageView* button = [weakSelf.test objectAtIndexedSubscript:index];
-//                    
-//                    if ([self.activityVM isOnlyImage:index]) {
-//                        [button setImageWithURL:[self.activityVM imageURLForItem:index] placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
-//                    }
-//                    else {
-//                        
-//                        [button setImageWithURL:[self.activityVM imageURLForItem:index] placeholder:nil];
-//                        
-//                        
-//                    }
-//                }
-                
-                [weakSelf.headerView reloadData];
-                [weakSelf.tableView endHeaderRefresh];
+                [weakSelf.headVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
+                    
+                    [weakSelf.headerView reloadData];
+                    [weakSelf.tableView reloadData];
+                    [weakSelf.tableView endHeaderRefresh];
+                }];
             }];
         }];
     }];
     
     [self.tableView beginHeaderRefresh];
+    
+    [self.tableView addFootreRefresh:^{
+        
+        [weakSelf.cookerVM getDataWithMode:RequestModeMore completionHandler:^(NSError *error) {
+            
+            [weakSelf.tableView reloadData];
+            [weakSelf.tableView endFooterRefresh];
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,16 +99,47 @@
     NSLog(@"Click Activity = %ld", index);
 }
 
+#pragma mark - TableViewDetail DataSource
+
+- (NSInteger)homePageDetailNumberOfItem:(CrowHomePageDetailCell *)cell rowNumber:(NSInteger)row {
+    return [self.cookerVM cellImageNumberForRow:row];
+}
+
+- (NSURL *)homePageDetailCell:(CrowHomePageDetailCell *)cell imageURLForIndex:(NSInteger)index {
+    return [self.cookerVM cellImageURLForRow:cell.indexRow imageNumber:index];
+}
+
+- (void)homePageDetailCell:(CrowHomePageDetailCell *)cell didSelectedItemAtIndex:(NSInteger)index {
+    NSLog(@"index = %ld", index);
+}
+
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 0;
+    return self.cookerVM.rowNumber;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CrowHomePageDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CrowHomePageDetailCell" forIndexPath:indexPath];
     
-    return 0;
+    cell.delegate   = self;
+    cell.dataSource = self;
+    
+    cell.userHeadIV.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    [cell.userHeadIV setImageWithURL:[self.cookerVM userHeadForRow:indexPath.row] placeholder:[UIImage imageNamed:@"man_lying"]];
+    cell.titleLB.attributedText = [self.cookerVM titleForRow:indexPath.row];
+    cell.detailLB.attributedText = [self.cookerVM detailForRow:indexPath.row];
+    cell.indexRow = indexPath.row;
+    
+    [cell reloadData];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -126,6 +160,13 @@
 		_activityVM = [[CrowHomePageActivityViewModel alloc] init];
 	}
 	return _activityVM;
+}
+
+- (CrowHomePageCookerViewModel *)cookerVM {
+	if(_cookerVM == nil) {
+		_cookerVM = [[CrowHomePageCookerViewModel alloc] init];
+	}
+	return _cookerVM;
 }
 
 @end

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -634,12 +633,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oN-hQ-hAb">
-                                <rect key="frame" x="216" y="20" width="44" height="44"/>
+                                <rect key="frame" x="224" y="20" width="44" height="44"/>
                                 <animations/>
                                 <state key="normal" image="my_notice_btn_nol"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-nz-1Vd">
-                                <rect key="frame" x="260" y="20" width="44" height="44"/>
+                                <rect key="frame" x="268" y="20" width="44" height="44"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4tj-TX-qIM"/>
@@ -652,8 +651,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qsg-nz-1Vd" firstAttribute="leading" secondItem="1oN-hQ-hAb" secondAttribute="trailing" id="GsH-c9-GSB"/>
-                            <constraint firstItem="Qsg-nz-1Vd" firstAttribute="top" secondItem="jsK-Rd-cII" secondAttribute="bottom" id="Ztu-GZ-cgl"/>
-                            <constraint firstItem="Qsg-nz-1Vd" firstAttribute="trailing" secondItem="D98-bp-k2A" secondAttribute="trailingMargin" id="f5T-oq-EBO"/>
+                            <constraint firstAttribute="trailing" secondItem="Qsg-nz-1Vd" secondAttribute="trailing" constant="8" id="Tv0-gc-Wfe"/>
+                            <constraint firstItem="Qsg-nz-1Vd" firstAttribute="top" secondItem="jsK-Rd-cII" secondAttribute="bottom" id="eMk-Sa-md2"/>
                             <constraint firstItem="Qsg-nz-1Vd" firstAttribute="centerY" secondItem="1oN-hQ-hAb" secondAttribute="centerY" id="uyi-5b-KpA"/>
                         </constraints>
                     </view>
@@ -661,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e7-V8-lTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="15"/>
+            <point key="canvasLocation" x="685" y="15"/>
         </scene>
     </scenes>
     <resources>

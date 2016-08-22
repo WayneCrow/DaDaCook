@@ -9,6 +9,7 @@
 #import "CrowBaseNetworking.h"
 #import "CrowHomePageHeaderModel.h"
 #import "CrowHomePageActivtyModel.h"
+#import "CrowHomePageCookerModel.h"
 
 @interface CrowNetManager : CrowBaseNetworking
 
@@ -21,5 +22,8 @@
 
 // 头部活动
 + (id)postHomePageActivityCompletionHandler:(void(^)(CrowHomePageActivtyModel *model, NSError *error))completionHandler;
+
+// 厨师内容
++ (id)postHomePageCookerDetailPage:(NSInteger)page CompletionHandler:(void(^)(CrowHomePageCookerModel *model, NSError *error))completionHandler;
 
 @end

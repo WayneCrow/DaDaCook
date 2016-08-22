@@ -17,10 +17,7 @@
 // 头部广告
 + (id)postHomePageHeaderAdCompletionHandler:(void (^)(CrowHomePageHeaderModel *, NSError *))completionHandler {
     
-    NSMutableDictionary *dic = [NSMutableDictionary new];
-    kParmentersWith(dic)
-    
-    return [self POST:kHomePageHeaderPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+    return [self POST:kHomePageHeaderPath parmenters:nil completionHandler:^(id responseObj, NSError *error) {
         !completionHandler ?: completionHandler([CrowHomePageHeaderModel parse:responseObj], error);
     }];
 }
@@ -28,11 +25,20 @@
 // 头部活动
 + (id)postHomePageActivityCompletionHandler:(void (^)(CrowHomePageActivtyModel *, NSError *))completionHandler {
     
-    NSMutableDictionary *dic = [NSMutableDictionary new];
-    kParmenters(dic)
-    
-    return [self POST:kHomePageActivityPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+    return [self POST:kHomePageActivityPath parmenters:nil completionHandler:^(id responseObj, NSError *error) {
         !completionHandler ?: completionHandler([CrowHomePageActivtyModel parse:responseObj], error);
+    }];
+}
+
+// 厨师信息
++ (id)postHomePageCookerDetailPage:(NSInteger)page CompletionHandler:(void (^)(CrowHomePageCookerModel *, NSError *))completionHandler {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:[NSString stringWithFormat:@"%ld", page] forKey:@"page"];
+    [dic setObject:@"radius" forKey:@5000];
+    
+    return [self POST:kHomePageCookerPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([CrowHomePageCookerModel parse:responseObj], error);
     }];
 }
 

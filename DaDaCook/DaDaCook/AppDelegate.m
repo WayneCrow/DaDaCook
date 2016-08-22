@@ -19,11 +19,11 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self configApplication:launchOptions];
     [self.locationManager startUpdatingLocation];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }
@@ -37,15 +37,19 @@
             [_locationManager requestWhenInUseAuthorization];
         }
     }
-    
     return _locationManager;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     if (locations.count > 0) {
         CLLocation *location = locations.firstObject;
-        
         CLLocationCoordinate2D coordinate = location.coordinate;
+        
+        //如果是模拟器,强制指定当前位置是北京
+        if ([UIDevice currentDevice].isSimulator) {
+            coordinate = CLLocationCoordinate2DMake(39.876369, 116.465072);
+        }
+        
         [[NSUserDefaults standardUserDefaults] setDouble:coordinate.latitude forKey:kCurrentLatitudeKey];
         [[NSUserDefaults standardUserDefaults] setDouble:coordinate.longitude forKey:kCurrentLongitudeKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
