@@ -106,7 +106,13 @@
 }
 
 - (NSURL *)homePageDetailCell:(CrowHomePageDetailCell *)cell imageURLForIndex:(NSInteger)index {
+    NSLog(@"%ld", (long)index);
     return [self.cookerVM cellImageURLForRow:cell.indexRow imageNumber:index];
+}
+
+- (NSString *)homePageDetailCell:(CrowHomePageDetailCell *)cell detailLableForIndex:(NSInteger)index {
+    NSLog(@"%ld", index);
+    return [self.cookerVM cellDetailForRow:cell.indexRow imageNumber:index];
 }
 
 - (void)homePageDetailCell:(CrowHomePageDetailCell *)cell didSelectedItemAtIndex:(NSInteger)index {
@@ -129,6 +135,7 @@
     cell.userHeadIV.layer.borderColor = [UIColor whiteColor].CGColor;
     
     [cell.userHeadIV setImageWithURL:[self.cookerVM userHeadForRow:indexPath.row] placeholder:[UIImage imageNamed:@"man_lying"]];
+    [self.cookerVM isAuthForRow:indexPath.row] ? (cell.isAuthIV.hidden = NO) : (cell.isAuthIV.hidden = YES);
     cell.titleLB.attributedText = [self.cookerVM titleForRow:indexPath.row];
     cell.detailLB.attributedText = [self.cookerVM detailForRow:indexPath.row];
     cell.indexRow = indexPath.row;

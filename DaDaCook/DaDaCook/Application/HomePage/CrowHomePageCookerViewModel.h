@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly) NSInteger rowNumber;
 - (NSURL *)coverImageForRow:(NSInteger)row;
+- (NSString *)foodDetailForRow:(NSInteger)row;
 - (BOOL)isNewForRow:(NSInteger)row;
 - (NSURL *)userHeadForRow:(NSInteger)row;
 - (BOOL)isAuthForRow:(NSInteger)row;
@@ -20,6 +21,7 @@
 
 - (NSInteger)cellImageNumberForRow:(NSInteger)row;
 - (NSURL *)cellImageURLForRow:(NSInteger)row imageNumber:(NSInteger)index;
+- (NSString *)cellDetailForRow:(NSInteger)row imageNumber:(NSInteger)index;
 
 @property (nonatomic) NSInteger page;
 @property (nonatomic) NSMutableArray<CrowHomePageCookerDataListModel *> *dataList;

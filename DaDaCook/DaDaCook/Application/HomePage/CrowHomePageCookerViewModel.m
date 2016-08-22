@@ -50,7 +50,7 @@
 }
 
 - (BOOL)isAuthForRow:(NSInteger)row {
-    return nil;
+    return self.dataList[row].is_auth == 1 ? YES : NO;
 }
 
 - (NSAttributedString *)titleForRow:(NSInteger)row {
@@ -78,11 +78,25 @@
 }
 
 - (NSInteger)cellImageNumberForRow:(NSInteger)row {
-    return self.dataList[row].detail.count;
+    return self.dataList[row].detail.count + 1;
 }
 
 - (NSURL *)cellImageURLForRow:(NSInteger)row imageNumber:(NSInteger)index {
-    return self.dataList[row].detail[index].dish_image_url.crow_URL;
+    if (index == 0) {
+        return self.dataList[row].cover_image_url.crow_URL;
+    }
+    else {
+        return self.dataList[row].detail[index - 1].dish_image_url.crow_URL;
+    }
+}
+
+- (NSString *)cellDetailForRow:(NSInteger)row imageNumber:(NSInteger)index {
+    if (index == 0) {
+        return  nil;
+    }
+    else {
+        return [NSString stringWithFormat:@"  %@ ￥%ld  ", self.dataList[row].detail[index - 1].dish_name, self.dataList[row].detail[index - 1].dish_price];
+    }
 }
 
 #pragma mark - LazyLoad (懒加载)

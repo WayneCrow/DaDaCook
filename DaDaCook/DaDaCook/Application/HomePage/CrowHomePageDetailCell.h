@@ -17,6 +17,7 @@
 
 - (NSInteger)homePageDetailNumberOfItem:(CrowHomePageDetailCell *)cell rowNumber:(NSInteger)row;
 - (NSURL *)homePageDetailCell:(CrowHomePageDetailCell *)cell imageURLForIndex:(NSInteger)index;
+- (NSString *)homePageDetailCell:(CrowHomePageDetailCell *)cell detailLableForIndex:(NSInteger)index;
 
 @end
 
@@ -34,14 +35,13 @@
 @property (nonatomic) id<HomePageDetailCellDataSource> dataSource;
 @property (nonatomic) id<HomePageDetailCellDelegate  > delegate;
 
-@property (weak, nonatomic) IBOutlet iCarousel *ic;
+@property (weak, nonatomic) IBOutlet iCarousel     *ic;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
-
 @property (nonatomic) NSInteger indexRow;
 @property (weak, nonatomic) IBOutlet UIImageView *userHeadIV;
 @property (weak, nonatomic) IBOutlet UIImageView *isAuthIV;
-@property (weak, nonatomic) IBOutlet UILabel *titleLB;
-@property (weak, nonatomic) IBOutlet UILabel *detailLB;
+@property (weak, nonatomic) IBOutlet UILabel     *titleLB;
+@property (weak, nonatomic) IBOutlet UILabel     *detailLB;
 
 - (void)reloadData;
 

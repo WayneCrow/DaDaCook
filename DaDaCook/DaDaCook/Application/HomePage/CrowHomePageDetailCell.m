@@ -52,15 +52,33 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
     if (!view) {
-        view = [[UIImageView alloc] initWithFrame:carousel.bounds];
-
-        [((UIImageView *)view) setImage:[UIImage imageNamed:@"default_kitchenpic"]];
         
-        view.contentMode   = UIViewContentModeScaleAspectFill;
-        view.clipsToBounds = YES;
+        view = [[UIView alloc]initWithFrame:carousel.bounds];
+        
+        UIImageView * image = [[UIImageView alloc] initWithFrame:carousel.bounds];
+        [view addSubview:image];
+        [image setImage:[UIImage imageNamed:@"default_kitchenpic"]];
+        image.tag = 300;
+        
+        UILabel *foodDetailLB = [UILabel new];
+        [view addSubview:foodDetailLB];
+        [foodDetailLB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.right.equalTo(0);
+            make.height.equalTo(26);
+        }];
+        foodDetailLB.backgroundColor = kRGBA(0, 0, 0, 0.6);
+        foodDetailLB.textColor       = [UIColor whiteColor];
+        foodDetailLB.font            = [UIFont systemFontOfSize:14];
+        foodDetailLB.tag             = 301;
     }
+    
+    UIImageView *image = [view viewWithTag:300];
+    UILabel *label     = [view viewWithTag:301];
     if ([_dataSource respondsToSelector:@selector(homePageDetailCell:imageURLForIndex:)]) {
-        [((UIImageView *)view) setImageWithURL:[_dataSource homePageDetailCell:self imageURLForIndex:index] placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
+        [image setImageWithURL:[_dataSource homePageDetailCell:self imageURLForIndex:index] placeholder:[UIImage imageNamed:@"default_kitchenpic"]];
+    }
+    if ([_dataSource respondsToSelector:@selector(homePageDetailCell:detailLableForIndex:)]) {
+        label.text = [_dataSource homePageDetailCell:self detailLableForIndex:index];
     }
     
     return view;
@@ -75,6 +93,10 @@
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
     _pageControl.currentPage = carousel.currentItemIndex;
+    
+//    if ([_dataSource respondsToSelector:@selector(homePageDetailCell:detailLableForIndex:)]) {
+//        _detailLB.text = [_dataSource homePageDetailCell:self detailLableForIndex:carousel.currentItemIndex];
+//    }
 }
 
 #pragma mark - ic Delegate
