@@ -10,6 +10,7 @@
 #import "CrowHomePageViewModel.h"
 #import "CrowHomePageHeaderView.h"
 #import "CrowHomePageDetailCell.h"
+#import "CrowCookerDetailViewController.h"
 
 @interface CrowHomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageHeadDelegate, HomePageHeadDataSource, HomePageDetailCellDelegate, HomePageDetailCellDataSource>
 
@@ -151,6 +152,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSLog(@"Row = %ld", indexPath.row);
+    
+    [self.navigationController pushViewController:[[CrowCookerDetailViewController alloc] initWithStyle:UITableViewStyleGrouped andCookerID:[self.homePageVM cookerIDForRow:indexPath.row]] animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

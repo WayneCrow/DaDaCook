@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CrowHomePageCookerFourthlyDetailDataModel,CrowHomePageCookerFourthlyDetailDataListModel,CrowHomePageCookerFourthlyDetailDataListPraiseModel,CrowHomePageCookerFourthlyDetailDataListOrderModel,CrowHomePageCookerFourthlyDetailDataListExpressModel;
+@class CrowHomePageCookerFourthlyDetailDataModel,CrowHomePageCookerFourthlyDetailDataListModel,CrowHomePageCookerFourthlyDetailDataListPraiseModel,CrowHomePageCookerFourthlyDetailDataListOrderModel,CrowHomePageCookerFourthlyDetailDataListExpressModel,CrowHomePageCookerFourthlyDetailDataListCookerModel;
 
 @interface CrowHomePageCookerFourthlyDetailModel : NSObject
 
@@ -56,8 +56,9 @@
 @property (nonatomic, copy  ) NSString  *kitchen_name;
 // express_tag -> express
 @property (nonatomic, strong) NSArray<CrowHomePageCookerFourthlyDetailDataListExpressModel *> *express;
-@property (nonatomic, strong) NSArray   *children;
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, strong) NSArray<CrowHomePageCookerFourthlyDetailDataListCookerModel *>   *children;
+// id -> ID
+@property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) NSInteger comment_id;
 @property (nonatomic, copy  ) NSString  *occupation;
 @property (nonatomic, strong) NSArray   *platform;
@@ -70,6 +71,15 @@
 @property (nonatomic, strong) NSArray<CrowHomePageCookerFourthlyDetailDataListPraiseModel *> *praise;
 @property (nonatomic, copy  ) NSString  *express_type;
 @property (nonatomic, copy  ) NSString  *image_url;
+
+@end
+
+
+@interface CrowHomePageCookerFourthlyDetailDataListCookerModel : NSObject
+
+@property (nonatomic, copy  ) NSString  *content;
+@property (nonatomic, copy  ) NSString  *create_time;
+@property (nonatomic, assign) NSInteger sender_type;
 
 @end
 

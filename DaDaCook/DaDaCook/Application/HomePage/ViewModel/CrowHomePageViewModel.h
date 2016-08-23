@@ -34,6 +34,7 @@
 - (BOOL)isAuthForRow:(NSInteger)row;
 - (NSAttributedString *)titleForRow:(NSInteger)row;
 - (NSAttributedString *)detailForRow:(NSInteger)row;
+- (NSInteger)cookerIDForRow:(NSInteger)row;
 
 - (NSInteger)cellImageNumberForRow:(NSInteger)row;
 - (NSURL *)cellImageURLForRow:(NSInteger)row imageNumber:(NSInteger)index;

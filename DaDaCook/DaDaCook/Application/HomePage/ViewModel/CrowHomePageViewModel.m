@@ -28,8 +28,8 @@
             
             if (requestMode == RequestModeRefresh) {
                 [self.headerList removeAllObjects];
+                [self.headerList addObjectsFromArray:model.data.list];
             }
-            [self.headerList addObjectsFromArray:model.data.list];
         }
         if (total == 0) {
             !completionHandler ?: completionHandler(error);
@@ -44,11 +44,10 @@
             
             if (requestMode == RequestModeRefresh) {
                 [self.activityList removeAllObjects];
+                [model.data.list enumerateObjectsUsingBlock:^(CrowHomePageActivtyDataListModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [self.activityList addObject:obj];
+                }];
             }
-            
-            [model.data.list enumerateObjectsUsingBlock:^(CrowHomePageActivtyDataListModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [self.activityList addObject:obj];
-            }];
         }
         if (total == 0) {
             !completionHandler ?: completionHandler(error);
@@ -64,7 +63,6 @@
             if (requestMode == RequestModeRefresh) {
                 [self.cookerDetailList removeAllObjects];
             }
-            
             [self.cookerDetailList addObjectsFromArray:model.data.list];
         }
         if (total == 0) {
@@ -176,6 +174,10 @@
     else {
         return [NSString stringWithFormat:@"  %@ ￥%ld  ", self.cookerDetailList[row].detail[index - 1].dish_name, self.cookerDetailList[row].detail[index - 1].dish_price];
     }
+}
+
+- (NSInteger)cookerIDForRow:(NSInteger)row {
+    return self.cookerDetailList[row].kitchen_id;
 }
 
 #pragma mark - LazyLoad (懒加载)

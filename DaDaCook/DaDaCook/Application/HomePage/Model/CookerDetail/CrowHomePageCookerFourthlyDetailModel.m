@@ -31,18 +31,23 @@
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass {
     return @{@"order" : [CrowHomePageCookerFourthlyDetailDataListOrderModel class],
            @"express" : [CrowHomePageCookerFourthlyDetailDataListExpressModel class],
+          @"children" : [CrowHomePageCookerFourthlyDetailDataListCookerModel class],
             @"praise" : [CrowHomePageCookerFourthlyDetailDataListPraiseModel class]
              };
 }
 
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper {
     return @{@"order" : @"order_tag",
-           @"express" : @"express_tag"
+           @"express" : @"express_tag",
+                @"ID" : @"id"
              };
 }
 
 @end
 
+@implementation CrowHomePageCookerFourthlyDetailDataListCookerModel
+
+@end
 
 @implementation CrowHomePageCookerFourthlyDetailDataListPraiseModel
 
@@ -57,5 +62,4 @@
 @implementation CrowHomePageCookerFourthlyDetailDataListExpressModel
 
 @end
-
 

@@ -24,7 +24,6 @@
     id mineNavi     = [[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateInitialViewController];
     
     self.viewControllers = @[homePageNavi, discoverNavi, mineNavi];
-    
 }
 
 - (void)didReceiveMemoryWarning {
