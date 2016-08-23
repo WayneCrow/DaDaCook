@@ -7,10 +7,8 @@
 //
 
 #import "CrowHomePageViewController.h"
-#import "CrowHomePageHeaderViewModel.h"
+#import "CrowHomePageViewModel.h"
 #import "CrowHomePageHeaderView.h"
-#import "CrowHomePageActivityViewModel.h"
-#import "CrowHomePageCookerViewModel.h"
 #import "CrowHomePageDetailCell.h"
 
 @interface CrowHomePageViewController ()<UITableViewDelegate, UITableViewDataSource, HomePageHeadDelegate, HomePageHeadDataSource, HomePageDetailCellDelegate, HomePageDetailCellDataSource>
@@ -20,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet CrowHomePageHeaderView *headerView;
 
 @property (weak, nonatomic) IBOutlet UIView *navigationBar;
+@property (weak, nonatomic) IBOutlet UIView *bottomMaskView;
 @property (weak, nonatomic) IBOutlet UIButton *activityButton;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UIControl *searchBar;
@@ -27,9 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLB;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIconIV;
 
-@property (nonatomic) CrowHomePageHeaderViewModel *headVM;
-@property (nonatomic) CrowHomePageActivityViewModel *activityVM;
-@property (nonatomic) CrowHomePageCookerViewModel *cookerVM;
+@property (nonatomic) CrowHomePageViewModel *homePageVM;
 
 @end
 
@@ -39,7 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    
     _headerView.delegate   = self;
     _headerView.dataSource = self;
     
@@ -47,17 +44,11 @@
     
     [self.tableView addHeaderRefresh:^{
         
-        [weakSelf.cookerVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
+        [weakSelf.homePageVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
             
-            [weakSelf.activityVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
-                
-                [weakSelf.headVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
-                    
-                    [weakSelf.headerView reloadData];
-                    [weakSelf.tableView reloadData];
-                    [weakSelf.tableView endHeaderRefresh];
-                }];
-            }];
+            [weakSelf.headerView reloadData];
+            [weakSelf.tableView reloadData];
+            [weakSelf.tableView endHeaderRefresh];
         }];
     }];
     
@@ -65,7 +56,7 @@
     
     [self.tableView addFootreRefresh:^{
         
-        [weakSelf.cookerVM getDataWithMode:RequestModeMore completionHandler:^(NSError *error) {
+        [weakSelf.homePageVM getDataWithMode:RequestModeMore completionHandler:^(NSError *error) {
             
             [weakSelf.tableView reloadData];
             [weakSelf.tableView endFooterRefresh];
@@ -81,11 +72,11 @@
 #pragma mark - headView DataSource
 
 - (NSInteger)homePageHeaderNumberOfItems:(CrowHomePageHeaderView *)headView {
-    return self.headVM.headNumber;
+    return self.homePageVM.headNumber;
 }
 
 - (NSURL *)homePageHeadView:(CrowHomePageHeaderView *)headView imageURLForIndex:(NSInteger)index {
-    return [self.headVM imageForItem:index];
+    return [self.homePageVM imageForItem:index];
 }
 
 - (void)homePageHeadView:(CrowHomePageHeaderView *)headView didSelectedItemAtIndex:(NSInteger)index {
@@ -93,12 +84,13 @@
 }
 
 - (NSURL *)homePageHeadView:(CrowHomePageHeaderView *)headView activityImageURLForIndex:(NSInteger)index {
-    return [self.activityVM imageURLForItem:index];
+    return [self.homePageVM imageURLForItem:index];
 }
 
 - (NSString *)homePageHeadView:(CrowHomePageHeaderView *)headView activityTitleForIndex:(NSInteger)index {
-    if (![self.activityVM isOnlyImage:index]) {
-        return [self.activityVM titleForItem:index];
+    
+    if (![self.homePageVM isOnlyImage:index]) {
+        return [self.homePageVM titleForItem:index];
     }
     return nil;
 }
@@ -110,15 +102,15 @@
 #pragma mark - TableViewDetail DataSource
 
 - (NSInteger)homePageDetailNumberOfItem:(CrowHomePageDetailCell *)cell rowNumber:(NSInteger)row {
-    return [self.cookerVM cellImageNumberForRow:row];
+    return [self.homePageVM cellImageNumberForRow:row];
 }
 
 - (NSURL *)homePageDetailCell:(CrowHomePageDetailCell *)cell imageURLForIndex:(NSInteger)index {
-    return [self.cookerVM cellImageURLForRow:cell.indexRow imageNumber:index];
+    return [self.homePageVM cellImageURLForRow:cell.indexRow imageNumber:index];
 }
 
 - (NSString *)homePageDetailCell:(CrowHomePageDetailCell *)cell detailLableForIndex:(NSInteger)index {
-    return [self.cookerVM cellDetailForRow:cell.indexRow imageNumber:index];
+    return [self.homePageVM cellDetailForRow:cell.indexRow imageNumber:index];
 }
 
 - (void)homePageDetailCell:(CrowHomePageDetailCell *)cell didSelectedItemAtIndex:(NSInteger)index {
@@ -128,8 +120,7 @@
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.cookerVM.rowNumber;
+    return self.homePageVM.rowNumber;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -140,10 +131,11 @@
     
     cell.userHeadIV.layer.borderColor = [UIColor whiteColor].CGColor;
     
-    [cell.userHeadIV setImageWithURL:[self.cookerVM userHeadForRow:indexPath.row] placeholder:[UIImage imageNamed:@"man_lying"]];
-    [self.cookerVM isAuthForRow:indexPath.row] ? (cell.isAuthIV.hidden = NO) : (cell.isAuthIV.hidden = YES);
-    cell.titleLB.attributedText = [self.cookerVM titleForRow:indexPath.row];
-    cell.detailLB.attributedText = [self.cookerVM detailForRow:indexPath.row];
+    [cell.userHeadIV setImageWithURL:[self.homePageVM userHeadForRow:indexPath.row] placeholder:[UIImage imageNamed:@"man_lying"]];
+    [self.homePageVM isAuthForRow:indexPath.row] ? (cell.isAuthIV.hidden = NO) : (cell.isAuthIV.hidden = YES);
+    cell.titleLB.attributedText = [self.homePageVM titleForRow:indexPath.row];
+    cell.detailLB.attributedText = [self.homePageVM detailForRow:indexPath.row];
+    
     cell.indexRow = indexPath.row;
     
     [cell reloadData];
@@ -165,6 +157,7 @@
 //    NSLog(@"%f, %f", self.tableView.contentOffset.x, self.tableView.contentOffset.y);
     
     self.navigationBar.alpha  = self.tableView.contentOffset.y / 100;
+    self.bottomMaskView.alpha = self.navigationBar.alpha;
     self.activityButton.alpha = (self.tableView.contentOffset.y + 80) / 10 ;
     self.searchButton.alpha   = (self.tableView.contentOffset.y + 80) / 10 ;
     self.searchBar.alpha      = (self.tableView.contentOffset.y + 80) / 10 ;
@@ -197,25 +190,11 @@
 
 #pragma mark - LazyLoad (懒加载)
 
-- (CrowHomePageHeaderViewModel *)headVM {
-	if(_headVM == nil) {
-		_headVM = [[CrowHomePageHeaderViewModel alloc] init];
+- (CrowHomePageViewModel *)homePageVM {
+	if(_homePageVM == nil) {
+		_homePageVM = [[CrowHomePageViewModel alloc] init];
 	}
-	return _headVM;
-}
-
-- (CrowHomePageActivityViewModel *)activityVM {
-	if(_activityVM == nil) {
-		_activityVM = [[CrowHomePageActivityViewModel alloc] init];
-	}
-	return _activityVM;
-}
-
-- (CrowHomePageCookerViewModel *)cookerVM {
-	if(_cookerVM == nil) {
-		_cookerVM = [[CrowHomePageCookerViewModel alloc] init];
-	}
-	return _cookerVM;
+	return _homePageVM;
 }
 
 @end

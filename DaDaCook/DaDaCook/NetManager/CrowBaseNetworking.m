@@ -131,7 +131,7 @@
     [paramDic setObject:@"iOS" forKey:@"_platform"];
     [paramDic setObject:sizeStr forKey:@"_screen"];
     [paramDic setObject:timeStr forKey:@"_time"];
-    [paramDic setObject:@"2.9.1" forKey:@"_version"];
+    [paramDic setObject:@"2.9.6" forKey:@"_version"];
     [paramDic setObject:coordinateStr forKey:@"coordinate"];
     [paramDic setObject:@"0" forKey:@"type"];
     [paramDic setObject:coordinateStr forKey:@"user_coordinate"];
@@ -144,7 +144,7 @@
     [paramDic setObject:@"iOS" forKey:@"platform"];
     [paramDic setObject:sizeStr forKey:@"screen"];
     [paramDic setObject:timeStr forKey:@"time"];
-    [paramDic setObject:@"2.9.1" forKey:@"version"];
+    [paramDic setObject:@"2.9.6" forKey:@"version"];
     
     return paramDic;
 }

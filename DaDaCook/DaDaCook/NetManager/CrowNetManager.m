@@ -10,9 +10,7 @@
 
 @implementation CrowNetManager
 
-/**
- *  首页
- */
+/** 首页 **/
 
 // 头部广告
 + (id)postHomePageHeaderAdCompletionHandler:(void (^)(CrowHomePageHeaderModel *, NSError *))completionHandler {
@@ -30,7 +28,7 @@
     }];
 }
 
-// 厨师信息
+// 厨师列表信息
 + (id)postHomePageCookerDetailPage:(NSInteger)page CompletionHandler:(void (^)(CrowHomePageCookerModel *, NSError *))completionHandler {
     
     NSMutableDictionary *dic = [NSMutableDictionary new];
@@ -39,6 +37,47 @@
     
     return [self POST:kHomePageCookerPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
         !completionHandler ?: completionHandler([CrowHomePageCookerModel parse:responseObj], error);
+    }];
+}
+
+// 厨师详情信息
++ (id)postCookerDetailFirstPartId:(NSInteger)ID compltionHandler:(void (^)(CrowHomePageCookerFirstDetailModel *, NSError *))completionHandler {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:[NSString stringWithFormat:@"%ld", ID] forKey:@"kitchen_id"];
+    
+    return [self POST:kCookerFirstPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([CrowHomePageCookerFirstDetailModel parse:responseObj], error);
+    }];
+}
+
++ (id)postCookerDetailSecondPartId:(NSInteger)ID compltionHandler:(void (^)(CrowHomePageCookerSecondDetailModel *, NSError *))completionHandler {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:[NSString stringWithFormat:@"%ld", ID] forKey:@"kitchen_id"];
+    
+    return [self POST:kCookerSecondPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([CrowHomePageCookerSecondDetailModel parse:responseObj], error);
+    }];
+}
+
++ (id)postCookerDetailThirdPartId:(NSInteger)ID compltionHandler:(void (^)(CrowHomePageCookerThirdDetailModel *, NSError *))completionHandler {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:[NSString stringWithFormat:@"%ld", ID] forKey:@"kitchen_id"];
+    
+    return [self POST:kCookerThirdyPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([CrowHomePageCookerThirdDetailModel parse:responseObj], error);
+    }];
+}
+
++ (id)postCookerDetailFourthlyPartId:(NSInteger)ID compltionHandler:(void (^)(CrowHomePageCookerFourthlyDetailModel *, NSError *))completionHandler {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setObject:[NSString stringWithFormat:@"%ld", ID] forKey:@"kitchen_id"];
+    
+    return [self POST:kCookerFourthPath parmenters:dic completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([CrowHomePageCookerFourthlyDetailModel parse:responseObj], error);
     }];
 }
 

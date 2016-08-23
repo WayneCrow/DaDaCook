@@ -518,6 +518,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh7-Eh-Tpb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="1"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.64564402558664558" blue="0.43153747928368191" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="C7t-po-HBF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -526,14 +534,18 @@
                             <constraint firstAttribute="bottom" secondItem="d6O-Ya-G4A" secondAttribute="bottom" id="2wL-6t-yMl"/>
                             <constraint firstItem="d6O-Ya-G4A" firstAttribute="leading" secondItem="jcI-9k-NhF" secondAttribute="leading" id="5MS-LF-gX2"/>
                             <constraint firstItem="KcC-gP-Oav" firstAttribute="centerX" secondItem="jcI-9k-NhF" secondAttribute="centerX" id="9Jb-Zx-3II"/>
+                            <constraint firstItem="gh7-Eh-Tpb" firstAttribute="leading" secondItem="jcI-9k-NhF" secondAttribute="leading" id="9Ot-DL-iOm"/>
                             <constraint firstAttribute="trailing" secondItem="cY7-q5-vEV" secondAttribute="trailing" id="DlW-dO-Ks3"/>
                             <constraint firstAttribute="trailing" secondItem="yZI-sf-6B7" secondAttribute="trailing" constant="14" id="HFQ-Ls-mas"/>
                             <constraint firstItem="yZI-sf-6B7" firstAttribute="top" secondItem="jcI-9k-NhF" secondAttribute="topMargin" constant="20" id="Igv-g1-xt4"/>
                             <constraint firstItem="KcC-gP-Oav" firstAttribute="top" secondItem="jcI-9k-NhF" secondAttribute="topMargin" constant="20" id="N01-Yp-IwI"/>
+                            <constraint firstItem="gh7-Eh-Tpb" firstAttribute="top" secondItem="cY7-q5-vEV" secondAttribute="bottom" id="O03-e1-dP1"/>
                             <constraint firstAttribute="trailing" secondItem="d6O-Ya-G4A" secondAttribute="trailing" id="QKb-DZ-oMz"/>
                             <constraint firstItem="8et-3o-RT9" firstAttribute="leading" secondItem="jcI-9k-NhF" secondAttribute="leading" constant="14" id="aS7-gZ-Nhh"/>
+                            <constraint firstAttribute="trailing" secondItem="gh7-Eh-Tpb" secondAttribute="trailing" id="iFy-1c-WNy"/>
                             <constraint firstItem="cY7-q5-vEV" firstAttribute="leading" secondItem="jcI-9k-NhF" secondAttribute="leading" id="jFH-mQ-A5x"/>
                             <constraint firstItem="8et-3o-RT9" firstAttribute="top" secondItem="jcI-9k-NhF" secondAttribute="top" constant="20" id="juj-AS-LS5"/>
+                            <constraint firstItem="gh7-Eh-Tpb" firstAttribute="centerX" secondItem="jcI-9k-NhF" secondAttribute="centerX" id="vZm-hN-yY2"/>
                             <constraint firstItem="cY7-q5-vEV" firstAttribute="top" secondItem="jcI-9k-NhF" secondAttribute="top" id="y5q-0f-XpW"/>
                         </constraints>
                     </view>
@@ -542,6 +554,7 @@
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="activityButton" destination="8et-3o-RT9" id="0VE-on-MYk"/>
+                        <outlet property="bottomMaskView" destination="gh7-Eh-Tpb" id="Xfj-qP-xbJ"/>
                         <outlet property="headerView" destination="ae4-fB-n3c" id="5gu-Fk-REr"/>
                         <outlet property="locationIV" destination="qmW-jm-gLE" id="RTO-af-JU0"/>
                         <outlet property="locationIconIV" destination="idw-FI-MJn" id="bdu-Gy-C0H"/>
