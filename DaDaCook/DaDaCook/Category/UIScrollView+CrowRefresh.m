@@ -79,7 +79,7 @@
 }
 
 - (void)endFooterRefresh {
-    [self.mj_header endRefreshing];
+    [self.mj_footer endRefreshing];
 }
 
 @end

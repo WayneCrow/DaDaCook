@@ -93,10 +93,6 @@
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
     _pageControl.currentPage = carousel.currentItemIndex;
-    
-//    if ([_dataSource respondsToSelector:@selector(homePageDetailCell:detailLableForIndex:)]) {
-//        _detailLB.text = [_dataSource homePageDetailCell:self detailLableForIndex:carousel.currentItemIndex];
-//    }
 }
 
 #pragma mark - ic Delegate

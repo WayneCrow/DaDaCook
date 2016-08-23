@@ -54,6 +54,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSLog(@"Section = %ld, Row = %ld", indexPath.section, indexPath.row);
 }
 
 #pragma mark - LazyLoad (懒加载)

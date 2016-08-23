@@ -19,6 +19,14 @@
 // tableView 的头部视图没有复用问题，可以直接拖入VC
 @property (weak, nonatomic) IBOutlet CrowHomePageHeaderView *headerView;
 
+@property (weak, nonatomic) IBOutlet UIView *navigationBar;
+@property (weak, nonatomic) IBOutlet UIButton *activityButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIControl *searchBar;
+@property (weak, nonatomic) IBOutlet UIImageView *locationIV;
+@property (weak, nonatomic) IBOutlet UILabel *locationLB;
+@property (weak, nonatomic) IBOutlet UIImageView *locationIconIV;
+
 @property (nonatomic) CrowHomePageHeaderViewModel *headVM;
 @property (nonatomic) CrowHomePageActivityViewModel *activityVM;
 @property (nonatomic) CrowHomePageCookerViewModel *cookerVM;
@@ -27,11 +35,11 @@
 
 @implementation CrowHomePageViewController
 
+#pragma mark - LifeCycle (生命周期)
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    [self.tableView registerNib:[UINib nibWithNibName:@"CrowHomePageDetailCell" bundle:nil] forCellReuseIdentifier:@"CrowHomePageDetailCell"];
-    
+        
     _headerView.delegate   = self;
     _headerView.dataSource = self;
     
@@ -106,12 +114,10 @@
 }
 
 - (NSURL *)homePageDetailCell:(CrowHomePageDetailCell *)cell imageURLForIndex:(NSInteger)index {
-    NSLog(@"%ld", (long)index);
     return [self.cookerVM cellImageURLForRow:cell.indexRow imageNumber:index];
 }
 
 - (NSString *)homePageDetailCell:(CrowHomePageDetailCell *)cell detailLableForIndex:(NSInteger)index {
-    NSLog(@"%ld", index);
     return [self.cookerVM cellDetailForRow:cell.indexRow imageNumber:index];
 }
 
@@ -151,6 +157,42 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSLog(@"Row = %ld", indexPath.row);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    NSLog(@"%f, %f", self.tableView.contentOffset.x, self.tableView.contentOffset.y);
+    
+    self.navigationBar.alpha  = self.tableView.contentOffset.y / 100;
+    self.activityButton.alpha = (self.tableView.contentOffset.y + 80) / 10 ;
+    self.searchButton.alpha   = (self.tableView.contentOffset.y + 80) / 10 ;
+    self.searchBar.alpha      = (self.tableView.contentOffset.y + 80) / 10 ;
+    
+    if (self.navigationBar.alpha <= 0.2) {
+        [self.activityButton setImage:[UIImage imageNamed:@"home_activity"] forState:UIControlStateNormal];
+        self.activityButton.backgroundColor = kRGBA(0, 0, 0, 0.6);
+        
+        [self.searchButton setImage:[UIImage imageNamed:@"home_search"] forState:UIControlStateNormal];
+        self.searchButton.backgroundColor = kRGBA(0, 0, 0, 0.6);
+        
+        [self.locationIV setImage:[UIImage imageNamed:@"home_location"]];
+        [self.locationIconIV setImage:[UIImage imageNamed:@"home_transform"]];
+        self.locationLB.textColor = [UIColor whiteColor];
+        self.searchBar.backgroundColor = kRGBA(0, 0, 0, 0.6);
+    }
+    else {
+        [self.activityButton setImage:[UIImage imageNamed:@"home_activity_selected"] forState:UIControlStateNormal];
+        self.activityButton.backgroundColor = [UIColor clearColor];
+        
+        [self.searchButton setImage:[UIImage imageNamed:@"home_search_selected"] forState:UIControlStateNormal];
+        self.searchButton.backgroundColor = [UIColor clearColor];
+        
+        [self.locationIV setImage:[UIImage imageNamed:@"home_location_selected"]];
+        [self.locationIconIV setImage:[UIImage imageNamed:@"home_transform_seleced"]];
+        self.locationLB.textColor = [UIColor orangeColor];
+        self.searchBar.backgroundColor = [UIColor clearColor];
+    }
 }
 
 #pragma mark - LazyLoad (懒加载)
