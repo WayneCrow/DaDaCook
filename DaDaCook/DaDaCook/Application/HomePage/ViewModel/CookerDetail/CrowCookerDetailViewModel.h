@@ -18,7 +18,7 @@
 
 /** 第一分区 **/
 - (NSString *)LikeNumberForCooker;
-- (NSURL *)coverImageForCooker;
+- (NSArray<NSURL *> *)coverImageForCooker;
 - (NSString *)kitchenName;
 - (NSInteger)starNumber;
 - (NSString *)starNumberText;
@@ -30,6 +30,7 @@
 - (NSString *)kitchenDistance;
 
 /** 第二分区 **/
+@property (nonatomic, readonly) NSInteger authMsgNumber;
 - (NSURL *)authMsgIconForIndex:(NSInteger)index;
 - (NSString *)authMsgTextForIndex:(NSInteger)index;
 - (NSString *)totalCommentNumber;
@@ -37,6 +38,7 @@
 
 /** 第三分区 **/
 // 拿手菜
+@property (nonatomic, readonly) NSInteger foodNumber;
 - (NSURL *)foodImageForRow:(NSInteger)row;
 - (NSString *)foodTitleForRow:(NSInteger)row;
 - (NSString *)foodDetailForRow:(NSInteger)row;
@@ -44,6 +46,7 @@
 - (NSString *)stockAndEatNumber:(NSInteger)row;
 
 // 其他菜品
+@property (nonatomic, readonly) NSInteger otherFoodNumber;
 - (NSURL *)otherFoodImageForRow:(NSInteger)row;
 - (NSString *)otherFoodTitleForRow:(NSInteger)row;
 - (NSString *)otherFoodDetailForRow:(NSInteger)row;

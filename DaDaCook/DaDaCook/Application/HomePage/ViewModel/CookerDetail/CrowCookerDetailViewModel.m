@@ -68,8 +68,16 @@
     return [NSString stringWithFormat:@"%ld", self.firstList.collect_amount];
 }
 
-- (NSURL *)coverImageForCooker {
-    return self.firstList.kitchen_image_url.crow_URL;
+- (NSArray<NSURL *> *)coverImageForCooker {
+    
+    NSMutableArray *imagesArray = [NSMutableArray array];
+    
+    NSArray<NSString *> *imageURLStr = [self.firstList.kitchen_image_url componentsSeparatedByString:@","];
+    for (int index = 0; index < imageURLStr.count; index++) {
+        [imagesArray addObject:imageURLStr[index].crow_URL];
+    }
+    
+    return imagesArray.copy;
 }
 
 - (NSString *)kitchenName {
@@ -81,7 +89,7 @@
 }
 
 - (NSString *)starNumberText {
-    return [NSString stringWithFormat:@"%f分", self.firstList.star];
+    return [NSString stringWithFormat:@"%.1f分", self.firstList.star];
 }
 
 - (NSString *)cookerDetailInfo {
@@ -102,6 +110,10 @@
 }
 
 /** 第二分区 **/
+- (NSInteger)authMsgNumber {
+    return self.secondList.msg.count;
+}
+
 - (NSURL *)authMsgIconForIndex:(NSInteger)index {
     return self.secondList.msg[index].icon.crow_URL;
 }
@@ -120,6 +132,10 @@
 
 /** 第三分区 **/
 // 拿手菜
+- (NSInteger)foodNumber {
+    return self.thirdList.recommends.count;
+}
+
 - (NSURL *)foodImageForRow:(NSInteger)row {
     return self.thirdList.recommends[row].image_url.crow_URL;
 }
@@ -141,6 +157,10 @@
 }
 
 // 其他菜品
+- (NSInteger)otherFoodNumber {
+    return self.thirdList.common.count;
+}
+
 - (NSURL *)otherFoodImageForRow:(NSInteger)row {
     return self.thirdList.common[row].image_url.crow_URL;
 }

@@ -29,6 +29,8 @@
 
 @property (nonatomic) CrowHomePageViewModel *homePageVM;
 
+@property (nonatomic) NSInteger ID;
+
 @end
 
 @implementation CrowHomePageViewController
@@ -153,7 +155,11 @@
     
     NSLog(@"Row = %ld", indexPath.row);
     
-    [self.navigationController pushViewController:[[CrowCookerDetailViewController alloc] initWithStyle:UITableViewStyleGrouped andCookerID:[self.homePageVM cookerIDForRow:indexPath.row]] animated:YES];
+    UIStoryboard *storyBoard           = [UIStoryboard storyboardWithName:@"HomePage" bundle:nil];
+    CrowCookerDetailViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"CookerDetailVC"];
+    vc.ID = [self.homePageVM cookerIDForRow:indexPath.row];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -198,6 +204,13 @@
 		_homePageVM = [[CrowHomePageViewModel alloc] init];
 	}
 	return _homePageVM;
+}
+
+- (NSInteger)ID {
+	if(!_ID) {
+		_ID = 0;
+	}
+	return _ID;
 }
 
 @end

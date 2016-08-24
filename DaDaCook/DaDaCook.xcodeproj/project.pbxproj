@@ -39,8 +39,14 @@
 		9B858EDA1D6C4911006A8060 /* CrowHomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B858ECB1D6C4911006A8060 /* CrowHomePageHeaderView.m */; };
 		9B858EDB1D6C4911006A8060 /* CrowHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B858ECE1D6C4911006A8060 /* CrowHomePageViewController.m */; };
 		9B858EDC1D6C4911006A8060 /* CrowHomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B858ED11D6C4911006A8060 /* CrowHomePageViewModel.m */; };
-		9B858EE21D6C4D2D006A8060 /* CrowCookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B858EE11D6C4D2D006A8060 /* CrowCookerDetailViewController.m */; };
-		9B858EE51D6C7247006A8060 /* CrowCookerDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B858EE41D6C7247006A8060 /* CrowCookerDetailViewModel.m */; };
+		9BA5359E1D6D82D5006D7E09 /* CrowCookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5359D1D6D82D5006D7E09 /* CrowCookerDetailViewController.m */; };
+		9BA535A21D6D82F0006D7E09 /* CrowCookerDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535A11D6D82F0006D7E09 /* CrowCookerDetailViewModel.m */; };
+		9BA535A51D6D8B5B006D7E09 /* CrowCookerDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535A41D6D8B5B006D7E09 /* CrowCookerDetailCell.m */; };
+		9BA535A81D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535A71D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.m */; };
+		9BA535AB1D6DBBB9006D7E09 /* CrowCookerCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535AA1D6DBBB9006D7E09 /* CrowCookerCommentCell.m */; };
+		9BA535AE1D6DBC07006D7E09 /* CrowCookerAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535AD1D6DBC07006D7E09 /* CrowCookerAddressCell.m */; };
+		9BA535B11D6DBE30006D7E09 /* CrowCookerFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535B01D6DBE30006D7E09 /* CrowCookerFoodCell.m */; };
+		9BA535B41D6DBE49006D7E09 /* CrowCookerOtherFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA535B31D6DBE49006D7E09 /* CrowCookerOtherFoodCell.m */; };
 		9BB0DDA91D670D1F00DC767D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BB0DDAB1D670D1F00DC767D /* InfoPlist.strings */; };
 		9BD035341D64363A00BFC90B /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035331D64363A00BFC90B /* Discover.storyboard */; };
 		9BD035361D64370500BFC90B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD035351D64370500BFC90B /* Mine.storyboard */; };
@@ -111,10 +117,22 @@
 		9B858ECE1D6C4911006A8060 /* CrowHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageViewController.m; sourceTree = "<group>"; };
 		9B858ED01D6C4911006A8060 /* CrowHomePageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowHomePageViewModel.h; sourceTree = "<group>"; };
 		9B858ED11D6C4911006A8060 /* CrowHomePageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowHomePageViewModel.m; sourceTree = "<group>"; };
-		9B858EE01D6C4D2D006A8060 /* CrowCookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerDetailViewController.h; sourceTree = "<group>"; };
-		9B858EE11D6C4D2D006A8060 /* CrowCookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerDetailViewController.m; sourceTree = "<group>"; };
-		9B858EE31D6C7247006A8060 /* CrowCookerDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerDetailViewModel.h; sourceTree = "<group>"; };
-		9B858EE41D6C7247006A8060 /* CrowCookerDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerDetailViewModel.m; sourceTree = "<group>"; };
+		9BA5359C1D6D82D5006D7E09 /* CrowCookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerDetailViewController.h; sourceTree = "<group>"; };
+		9BA5359D1D6D82D5006D7E09 /* CrowCookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerDetailViewController.m; sourceTree = "<group>"; };
+		9BA535A01D6D82F0006D7E09 /* CrowCookerDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerDetailViewModel.h; sourceTree = "<group>"; };
+		9BA535A11D6D82F0006D7E09 /* CrowCookerDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerDetailViewModel.m; sourceTree = "<group>"; };
+		9BA535A31D6D8B5B006D7E09 /* CrowCookerDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerDetailCell.h; sourceTree = "<group>"; };
+		9BA535A41D6D8B5B006D7E09 /* CrowCookerDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerDetailCell.m; sourceTree = "<group>"; };
+		9BA535A61D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerAuthInfoCell.h; sourceTree = "<group>"; };
+		9BA535A71D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerAuthInfoCell.m; sourceTree = "<group>"; };
+		9BA535A91D6DBBB9006D7E09 /* CrowCookerCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerCommentCell.h; sourceTree = "<group>"; };
+		9BA535AA1D6DBBB9006D7E09 /* CrowCookerCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerCommentCell.m; sourceTree = "<group>"; };
+		9BA535AC1D6DBC07006D7E09 /* CrowCookerAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerAddressCell.h; sourceTree = "<group>"; };
+		9BA535AD1D6DBC07006D7E09 /* CrowCookerAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerAddressCell.m; sourceTree = "<group>"; };
+		9BA535AF1D6DBE30006D7E09 /* CrowCookerFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerFoodCell.h; sourceTree = "<group>"; };
+		9BA535B01D6DBE30006D7E09 /* CrowCookerFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerFoodCell.m; sourceTree = "<group>"; };
+		9BA535B21D6DBE49006D7E09 /* CrowCookerOtherFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowCookerOtherFoodCell.h; sourceTree = "<group>"; };
+		9BA535B31D6DBE49006D7E09 /* CrowCookerOtherFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowCookerOtherFoodCell.m; sourceTree = "<group>"; };
 		9BB0DDA51D670CC600DC767D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9BB0DDA61D670CC600DC767D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9BB0DDAA1D670D1F00DC767D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -157,6 +175,25 @@
 				1CEDAD6F36C7EBFE68B8FB2F /* libPods-DaDaCook.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B7488E51D6D3014003B3771 /* CookerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9BA535A31D6D8B5B006D7E09 /* CrowCookerDetailCell.h */,
+				9BA535A41D6D8B5B006D7E09 /* CrowCookerDetailCell.m */,
+				9BA535A61D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.h */,
+				9BA535A71D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.m */,
+				9BA535A91D6DBBB9006D7E09 /* CrowCookerCommentCell.h */,
+				9BA535AA1D6DBBB9006D7E09 /* CrowCookerCommentCell.m */,
+				9BA535AC1D6DBC07006D7E09 /* CrowCookerAddressCell.h */,
+				9BA535AD1D6DBC07006D7E09 /* CrowCookerAddressCell.m */,
+				9BA535AF1D6DBE30006D7E09 /* CrowCookerFoodCell.h */,
+				9BA535B01D6DBE30006D7E09 /* CrowCookerFoodCell.m */,
+				9BA535B21D6DBE49006D7E09 /* CrowCookerOtherFoodCell.h */,
+				9BA535B31D6DBE49006D7E09 /* CrowCookerOtherFoodCell.m */,
+			);
+			path = CookerDetail;
 			sourceTree = "<group>";
 		};
 		9B78432F1D62EA0800F5A468 = {
@@ -388,12 +425,12 @@
 		9B858EB71D6C4911006A8060 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B858EC51D6C4911006A8060 /* CrowHomePageHeaderModel.h */,
+				9B858EC61D6C4911006A8060 /* CrowHomePageHeaderModel.m */,
 				9B858EC11D6C4911006A8060 /* CrowHomePageActivtyModel.h */,
 				9B858EC21D6C4911006A8060 /* CrowHomePageActivtyModel.m */,
 				9B858EC31D6C4911006A8060 /* CrowHomePageCookerModel.h */,
 				9B858EC41D6C4911006A8060 /* CrowHomePageCookerModel.m */,
-				9B858EC51D6C4911006A8060 /* CrowHomePageHeaderModel.h */,
-				9B858EC61D6C4911006A8060 /* CrowHomePageHeaderModel.m */,
 				9B858EB81D6C4911006A8060 /* CookerDetail */,
 			);
 			path = Model;
@@ -421,6 +458,7 @@
 				9B858ECB1D6C4911006A8060 /* CrowHomePageHeaderView.m */,
 				9B858EC81D6C4911006A8060 /* CrowHomePageDetailCell.h */,
 				9B858EC91D6C4911006A8060 /* CrowHomePageDetailCell.m */,
+				9B7488E51D6D3014003B3771 /* CookerDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,8 +468,7 @@
 			children = (
 				9B858ECD1D6C4911006A8060 /* CrowHomePageViewController.h */,
 				9B858ECE1D6C4911006A8060 /* CrowHomePageViewController.m */,
-				9B858EE01D6C4D2D006A8060 /* CrowCookerDetailViewController.h */,
-				9B858EE11D6C4D2D006A8060 /* CrowCookerDetailViewController.m */,
+				9BA5359B1D6D82D5006D7E09 /* CookerDetail */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -441,10 +478,27 @@
 			children = (
 				9B858ED01D6C4911006A8060 /* CrowHomePageViewModel.h */,
 				9B858ED11D6C4911006A8060 /* CrowHomePageViewModel.m */,
-				9B858EE31D6C7247006A8060 /* CrowCookerDetailViewModel.h */,
-				9B858EE41D6C7247006A8060 /* CrowCookerDetailViewModel.m */,
+				9BA5359F1D6D82F0006D7E09 /* CookerDetail */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9BA5359B1D6D82D5006D7E09 /* CookerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5359C1D6D82D5006D7E09 /* CrowCookerDetailViewController.h */,
+				9BA5359D1D6D82D5006D7E09 /* CrowCookerDetailViewController.m */,
+			);
+			path = CookerDetail;
+			sourceTree = "<group>";
+		};
+		9BA5359F1D6D82F0006D7E09 /* CookerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9BA535A01D6D82F0006D7E09 /* CrowCookerDetailViewModel.h */,
+				9BA535A11D6D82F0006D7E09 /* CrowCookerDetailViewModel.m */,
+			);
+			path = CookerDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,8 +630,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B858ED61D6C4911006A8060 /* CrowHomePageActivtyModel.m in Sources */,
-				9B858EE51D6C7247006A8060 /* CrowCookerDetailViewModel.m in Sources */,
 				9B7843741D62F71700F5A468 /* NSObject+CrowParse.m in Sources */,
+				9BA535B11D6DBE30006D7E09 /* CrowCookerFoodCell.m in Sources */,
+				9BA5359E1D6D82D5006D7E09 /* CrowCookerDetailViewController.m in Sources */,
 				9B7843B91D63121500F5A468 /* AppDelegate+Crow.m in Sources */,
 				9B858ED21D6C4911006A8060 /* CrowHomePageCookerFirstDetailModel.m in Sources */,
 				9B858ED31D6C4911006A8060 /* CrowHomePageCookerFourthlyDetailModel.m in Sources */,
@@ -589,20 +644,25 @@
 				9B858ED51D6C4911006A8060 /* CrowHomePageCookerThirdDetailModel.m in Sources */,
 				9B858EB21D6C488A006A8060 /* CrowDiscoverModel.m in Sources */,
 				9B858EB31D6C488A006A8060 /* CrowDiscoverCell.m in Sources */,
+				9BA535AE1D6DBC07006D7E09 /* CrowCookerAddressCell.m in Sources */,
+				9BA535B41D6DBE49006D7E09 /* CrowCookerOtherFoodCell.m in Sources */,
 				9B78437D1D62F9C500F5A468 /* UIButton+CrowImageTitleSpacing.m in Sources */,
-				9B858EE21D6C4D2D006A8060 /* CrowCookerDetailViewController.m in Sources */,
+				9BA535A81D6D8DCC006D7E09 /* CrowCookerAuthInfoCell.m in Sources */,
 				9BD0353B1D643ACE00BFC90B /* CrowMainTabBarViewController.m in Sources */,
 				9B858EDC1D6C4911006A8060 /* CrowHomePageViewModel.m in Sources */,
 				9B858ED41D6C4911006A8060 /* CrowHomePageCookerSecondDetailModel.m in Sources */,
 				9B858EA41D6C482D006A8060 /* CrowMineViewController.m in Sources */,
 				9B858ED71D6C4911006A8060 /* CrowHomePageCookerModel.m in Sources */,
+				9BA535A51D6D8B5B006D7E09 /* CrowCookerDetailCell.m in Sources */,
 				9B858EDB1D6C4911006A8060 /* CrowHomePageViewController.m in Sources */,
 				9B7843401D62EA0800F5A468 /* AppDelegate.m in Sources */,
 				9B7843771D62F89500F5A468 /* NSString+Crow.m in Sources */,
 				9B7843891D63096400F5A468 /* CrowNetManager.m in Sources */,
 				9B78433D1D62EA0800F5A468 /* main.m in Sources */,
+				9BA535A21D6D82F0006D7E09 /* CrowCookerDetailViewModel.m in Sources */,
 				9B7DA28C1D6A851B0048BDAE /* CrowBaseViewModel.m in Sources */,
 				9B858ED91D6C4911006A8060 /* CrowHomePageDetailCell.m in Sources */,
+				9BA535AB1D6DBBB9006D7E09 /* CrowCookerCommentCell.m in Sources */,
 				9B858ED81D6C4911006A8060 /* CrowHomePageHeaderModel.m in Sources */,
 				9B7843801D62FF3E00F5A468 /* UIScrollView+CrowRefresh.m in Sources */,
 			);
