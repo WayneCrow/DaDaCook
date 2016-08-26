@@ -19,7 +19,6 @@
     
     _ic.scrollSpeed            = 0.3;
     _ic.clipsToBounds          = YES;
-    _ic.userInteractionEnabled = NO;
     
     [NSTimer bk_timerWithTimeInterval:2 block:^(NSTimer *timer) {
         [_ic scrollToItemAtIndex:_ic.currentItemIndex + 1 animated:YES];

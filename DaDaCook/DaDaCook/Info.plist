@@ -39,5 +39,11 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>baidumap</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string>DaDaCook</string>
 </dict>
 </plist>

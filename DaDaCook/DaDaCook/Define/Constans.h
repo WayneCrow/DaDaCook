@@ -12,6 +12,9 @@
 
 #import "AppDelegate.h"
 
+// 百度Map AppKey
+#define kBaiDuKey @"pqam6VcDhXRhRUtwcmz2fQ8knLi2kaA3"
+
 // 屏幕高宽
 #define kScreenW ([UIScreen mainScreen].bounds.size.width)
 #define kScreenH ([UIScreen mainScreen].bounds.size.height)

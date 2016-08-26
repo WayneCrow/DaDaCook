@@ -10,9 +10,9 @@
 
 @interface CrowCookerDetailCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *kitchenName;
-@property (weak, nonatomic) IBOutlet UILabel *starNumber;
-@property (weak, nonatomic) IBOutlet UILabel *cookerInfo;
+@property (weak, nonatomic) IBOutlet UILabel     *kitchenName;
+@property (weak, nonatomic) IBOutlet UILabel     *starNumber;
+@property (weak, nonatomic) IBOutlet UILabel     *cookerInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *kitchenHeadImage;
 
 @end

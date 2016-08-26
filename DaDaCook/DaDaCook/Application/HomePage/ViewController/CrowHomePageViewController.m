@@ -18,13 +18,13 @@
 // tableView 的头部视图没有复用问题，可以直接拖入VC
 @property (weak, nonatomic) IBOutlet CrowHomePageHeaderView *headerView;
 
-@property (weak, nonatomic) IBOutlet UIView *navigationBar;
-@property (weak, nonatomic) IBOutlet UIView *bottomMaskView;
-@property (weak, nonatomic) IBOutlet UIButton *activityButton;
-@property (weak, nonatomic) IBOutlet UIButton *searchButton;
-@property (weak, nonatomic) IBOutlet UIControl *searchBar;
+@property (weak, nonatomic) IBOutlet UIView      *navigationBar;
+@property (weak, nonatomic) IBOutlet UIView      *bottomMaskView;
+@property (weak, nonatomic) IBOutlet UIButton    *activityButton;
+@property (weak, nonatomic) IBOutlet UIButton    *searchButton;
+@property (weak, nonatomic) IBOutlet UIControl   *searchBar;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIV;
-@property (weak, nonatomic) IBOutlet UILabel *locationLB;
+@property (weak, nonatomic) IBOutlet UILabel     *locationLB;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIconIV;
 
 @property (nonatomic) CrowHomePageViewModel *homePageVM;
@@ -180,7 +180,7 @@
         
         [self.locationIV setImage:[UIImage imageNamed:@"home_location"]];
         [self.locationIconIV setImage:[UIImage imageNamed:@"home_transform"]];
-        self.locationLB.textColor = [UIColor whiteColor];
+        self.locationLB.textColor      = [UIColor whiteColor];
         self.searchBar.backgroundColor = kRGBA(0, 0, 0, 0.6);
     }
     else {
@@ -192,7 +192,7 @@
         
         [self.locationIV setImage:[UIImage imageNamed:@"home_location_selected"]];
         [self.locationIconIV setImage:[UIImage imageNamed:@"home_transform_seleced"]];
-        self.locationLB.textColor = [UIColor orangeColor];
+        self.locationLB.textColor      = [UIColor orangeColor];
         self.searchBar.backgroundColor = [UIColor clearColor];
     }
 }

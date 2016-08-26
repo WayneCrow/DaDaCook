@@ -104,14 +104,26 @@
 - (NSString *)kitchenAddress {
     return self.firstList.address;
 }
-
 - (NSString *)kitchenDistance {
     return [NSString stringWithFormat:@"相距：%@", self.firstList.distance];
+}
+
+// 当前的地理坐标
+- (float)kitchenLatitude {
+    return [self.firstList.latitude doubleValue];
+}
+
+- (float)kitchenLongitude {
+    return [self.firstList.longitude doubleValue];
 }
 
 /** 第二分区 **/
 - (NSInteger)authMsgNumber {
     return self.secondList.msg.count;
+}
+
+- (NSInteger)authMsgTypeForIndex:(NSInteger)index {
+    return self.secondList.msg[index].type;
 }
 
 - (NSURL *)authMsgIconForIndex:(NSInteger)index {
@@ -145,7 +157,7 @@
 }
 
 - (NSString *)foodDetailForRow:(NSInteger)row {
-    return self.thirdList.recommends[row].description;
+    return self.thirdList.recommends[row].des;
 }
 
 - (NSString *)foodPriceForRow:(NSInteger)row {
@@ -170,7 +182,7 @@
 }
 
 - (NSString *)otherFoodDetailForRow:(NSInteger)row {
-    return self.thirdList.common[row].description;
+    return self.thirdList.common[row].des;
 }
 
 - (NSString *)otherFoodstockAndEatNumber:(NSInteger)row {
