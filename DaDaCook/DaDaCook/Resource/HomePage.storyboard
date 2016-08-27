@@ -521,7 +521,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh7-Eh-Tpb">
                                 <rect key="frame" x="0.0" y="64" width="320" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.64564402558664558" blue="0.43153747928368191" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.44705882352941173" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="C7t-po-HBF"/>
                                 </constraints>
@@ -599,9 +599,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_kitchenpic" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-vl-F8l">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-vl-F8l">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                     </subviews>
                                     <animations/>
@@ -769,21 +770,21 @@
                                                     <rect key="frame" x="20" y="41" width="267" height="54"/>
                                                     <animations/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3SL-Ye-6EX">
-                                                        <size key="itemSize" width="73" height="28"/>
+                                                        <size key="itemSize" width="73" height="22"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4nb-DY-Vza">
-                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="28"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="22"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="莫喜达" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX0-C6-rRD">
-                                                                        <rect key="frame" x="8" y="6" width="57" height="15"/>
+                                                                        <rect key="frame" x="8" y="4" width="57" height="15"/>
                                                                         <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <color key="textColor" red="0.94901960784313721" green="0.44705882352941173" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
@@ -1136,7 +1137,7 @@
                                                     <constraint firstAttribute="width" constant="56" id="Tzh-Mh-PUm"/>
                                                     <constraint firstAttribute="height" constant="34" id="wAu-ZK-2eS"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="233" image="kitchendetails_like_unfilled_btn"/>
                                             </button>
                                         </subviews>
@@ -1167,6 +1168,14 @@
                                     <constraint firstAttribute="bottom" secondItem="cX9-Qc-iK2" secondAttribute="bottom" id="OGc-g0-HWi"/>
                                     <constraint firstAttribute="height" constant="64" id="hDD-rv-3Ub"/>
                                     <constraint firstAttribute="bottom" secondItem="IVa-Rz-fyb" secondAttribute="bottom" constant="6" id="xJa-K4-HMi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-S3-YCF">
+                                <rect key="frame" x="0.0" y="64" width="320" height="1"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.44705882352941173" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="WbB-J0-s65"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFX-B0-pSW">
@@ -1222,10 +1231,13 @@
                             <constraint firstItem="1LT-NC-xLH" firstAttribute="leading" secondItem="NEs-Jp-Uq7" secondAttribute="leading" id="J8D-s5-N3T"/>
                             <constraint firstItem="rNT-cm-CfE" firstAttribute="top" secondItem="NEs-Jp-Uq7" secondAttribute="top" id="LCr-Qg-JSM"/>
                             <constraint firstItem="rNT-cm-CfE" firstAttribute="leading" secondItem="NEs-Jp-Uq7" secondAttribute="leading" id="SY4-g1-Ve5"/>
+                            <constraint firstItem="Zqb-S3-YCF" firstAttribute="leading" secondItem="NEs-Jp-Uq7" secondAttribute="leading" id="WDa-5Q-Epo"/>
                             <constraint firstItem="zFX-B0-pSW" firstAttribute="leading" secondItem="NEs-Jp-Uq7" secondAttribute="leading" id="Zlv-tq-G63"/>
                             <constraint firstItem="1LT-NC-xLH" firstAttribute="top" secondItem="NEs-Jp-Uq7" secondAttribute="top" constant="-20" id="bej-8l-Hhf"/>
+                            <constraint firstAttribute="trailing" secondItem="Zqb-S3-YCF" secondAttribute="trailing" id="go7-sG-sIw"/>
                             <constraint firstItem="zFX-B0-pSW" firstAttribute="top" secondItem="dNf-z4-ZEa" secondAttribute="bottom" constant="-40" id="mbF-Za-Yro"/>
                             <constraint firstAttribute="trailing" secondItem="zFX-B0-pSW" secondAttribute="trailing" id="t1e-WM-raO"/>
+                            <constraint firstItem="Zqb-S3-YCF" firstAttribute="top" secondItem="rNT-cm-CfE" secondAttribute="bottom" id="xf2-ZE-Akv"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1237,7 +1249,10 @@
                         <outlet property="shareButton" destination="G1n-Fa-zyx" id="YNo-tU-PS7"/>
                         <outlet property="shoppingCartButton" destination="dNf-z4-ZEa" id="jv3-42-IuU"/>
                         <outlet property="tableView" destination="1LT-NC-xLH" id="hSt-Oz-6Ej"/>
+                        <outlet property="topBottomLineView" destination="Zqb-S3-YCF" id="S8K-OH-sO0"/>
                         <outlet property="topImageView" destination="0tn-vl-F8l" id="oGv-WZ-Emt"/>
+                        <outlet property="topMaskView" destination="rNT-cm-CfE" id="7ah-r9-nih"/>
+                        <outlet property="topSubMaskView" destination="IVa-Rz-fyb" id="c7j-h0-ia7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tm-dB-RMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1386,7 +1401,6 @@
     <resources>
         <image name="add_smallbtn" width="33" height="33"/>
         <image name="default_back" width="44" height="44"/>
-        <image name="default_kitchenpic" width="355" height="200"/>
         <image name="home_activity" width="15" height="16"/>
         <image name="home_banner_mask" width="375" height="13"/>
         <image name="home_location" width="9" height="12"/>

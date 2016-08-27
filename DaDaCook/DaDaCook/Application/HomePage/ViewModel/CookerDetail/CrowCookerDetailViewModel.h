@@ -30,8 +30,8 @@
 - (NSString *)kitchenDistance;
 
 // 当前的地理坐标
-- (float)kitchenLatitude;
-- (float)kitchenLongitude;
+- (double)kitchenLatitude;
+- (double)kitchenLongitude;
 
 /** 第二分区 **/
 @property (nonatomic, readonly) NSInteger authMsgNumber;

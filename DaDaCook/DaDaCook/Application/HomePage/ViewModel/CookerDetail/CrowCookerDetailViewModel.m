@@ -109,11 +109,11 @@
 }
 
 // 当前的地理坐标
-- (float)kitchenLatitude {
+- (double)kitchenLatitude {
     return [self.firstList.latitude doubleValue];
 }
 
-- (float)kitchenLongitude {
+- (double)kitchenLongitude {
     return [self.firstList.longitude doubleValue];
 }
 

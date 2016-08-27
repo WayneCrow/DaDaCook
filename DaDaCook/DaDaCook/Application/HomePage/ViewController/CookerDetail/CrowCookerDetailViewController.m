@@ -24,12 +24,18 @@
 @interface CrowCookerDetailViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
-@property (weak, nonatomic) IBOutlet UIButton    *backButton;
-@property (weak, nonatomic) IBOutlet UIButton    *likeButton;
-@property (weak, nonatomic) IBOutlet UIButton    *shareButton;
+
+@property (weak, nonatomic) IBOutlet UIView   *topMaskView;
+@property (weak, nonatomic) IBOutlet UIView *topBottomLineView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIView   *topSubMaskView;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewBottomConstraint;
-@property (weak, nonatomic) IBOutlet UIButton    *shoppingCartButton;
+@property (weak, nonatomic) IBOutlet UIButton           *shoppingCartButton;
 
 
 @property (nonatomic) CrowCookerDetailViewModel *detailVM;
@@ -102,6 +108,27 @@
             _topImageView.frame = CGRectMake(0, y, kScreenW, 185 - y);
         }
     }
+    
+    CGFloat yPosition = scrollView.contentOffset.y;
+    self.topMaskView.backgroundColor       = kRGBA(255, 255, 255, yPosition / 100);
+    self.topSubMaskView.backgroundColor    = kRGBA(255, 255, 255, yPosition / 100);
+    self.topBottomLineView.backgroundColor = kRGBA(242, 114, 66, yPosition / 100);
+    
+    if (yPosition > 30) {
+        [self.backButton setImage:[UIImage imageNamed:@"default_back"] forState:UIControlStateNormal];
+        [self.likeButton setImage:[UIImage imageNamed:@"kitchendetails_like_unfilled_orange_btn"] forState:UIControlStateNormal];
+        self.likeButton.titleLabel.textColor = [UIColor orangeColor];
+        [self.shareButton setImage:[UIImage imageNamed:@"kitchendetails_share_orange_btn"] forState:UIControlStateNormal];
+        self.topSubMaskView.backgroundColor = kRGBA(0, 0, 0, 0);
+    }
+    else {
+        [self.backButton setImage:[UIImage imageNamed:@"kitchendetail_back_btn"] forState:UIControlStateNormal];
+        [self.likeButton setImage:[UIImage imageNamed:@"kitchendetails_like_unfilled_btn"] forState:UIControlStateNormal];
+        self.likeButton.titleLabel.textColor = [UIColor whiteColor];
+        [self.shareButton setImage:[UIImage imageNamed:@"kitchendetails_share_btn"] forState:UIControlStateNormal];
+        self.topSubMaskView.backgroundColor = kRGBA(0, 0, 0, 0.6);
+    }
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -109,8 +136,7 @@
         CrowKitchenMapViewController *vc = segue.destinationViewController;
         vc.kitchenName = [self.detailVM kitchenName];
         vc.address     = [self.detailVM kitchenAddress];
-        
-        vc.distance = [NSString stringWithFormat:@"  %@  ", [[self.detailVM kitchenDistance] substringFromIndex:3]];
+        vc.distance    = [NSString stringWithFormat:@"  %@  ", [[self.detailVM kitchenDistance] substringFromIndex:3]];
         
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([self.detailVM kitchenLatitude], [self.detailVM kitchenLongitude]);
         vc.kitchenCoordinate = coordinate;
