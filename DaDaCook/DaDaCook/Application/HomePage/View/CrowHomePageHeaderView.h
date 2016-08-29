@@ -47,6 +47,11 @@
 @property (nonatomic) BOOL           autoScroll;
 @property (nonatomic) NSTimeInterval duration;
 
-@property (nonatomic) NSArray<UIControl *> *headControls;
+@property (nonatomic) UIView    *activityView;
+@property (nonatomic) NSInteger type0Number;
+@property (nonatomic) NSInteger type1Number;
+@property (nonatomic) BOOL      isHaveTyep1;
+
+@property (nonatomic) NSMutableArray<UIControl *> *headControls;
 
 @end

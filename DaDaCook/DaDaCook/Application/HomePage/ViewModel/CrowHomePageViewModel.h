@@ -21,6 +21,8 @@
 
 /** 头部活动栏 **/
 @property (nonatomic) NSInteger numberOfControl;
+- (NSInteger)type0Number;
+- (NSInteger)type1Number;
 - (NSURL *)imageURLForItem:(NSInteger)index;
 - (NSString *)titleForItem:(NSInteger)index;
 - (BOOL)isOnlyImage:(NSInteger)index;

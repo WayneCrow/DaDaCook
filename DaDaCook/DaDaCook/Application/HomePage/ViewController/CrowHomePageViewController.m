@@ -49,6 +49,9 @@
         
         [weakSelf.homePageVM getDataWithMode:RequestModeRefresh completionHandler:^(NSError *error) {
             
+            weakSelf.headerView.type0Number = [self.homePageVM type0Number];
+            weakSelf.headerView.type1Number = [self.homePageVM type1Number];
+            
             [weakSelf.headerView reloadData];
             [weakSelf.tableView reloadData];
             [weakSelf.tableView endHeaderRefresh];

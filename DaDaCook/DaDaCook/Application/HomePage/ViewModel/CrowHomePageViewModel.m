@@ -96,6 +96,26 @@
     return self.activityList.count;
 }
 
+- (NSInteger)type0Number {
+    __block NSInteger number = 0;
+    [self.activityList enumerateObjectsUsingBlock:^(CrowHomePageActivtyDataListModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.type == 0) {
+            number++;
+        }
+    }];
+    return number;
+}
+
+- (NSInteger)type1Number {
+    __block NSInteger number = 0;
+    [self.activityList enumerateObjectsUsingBlock:^(CrowHomePageActivtyDataListModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.type == 1) {
+            number++;
+        }
+    }];
+    return number;
+}
+
 - (NSURL *)imageURLForItem:(NSInteger)index {
     return self.activityList[index].imageUrl.crow_URL;
 }

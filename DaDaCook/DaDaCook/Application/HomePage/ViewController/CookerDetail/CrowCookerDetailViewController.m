@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 
 @property (weak, nonatomic) IBOutlet UIView   *topMaskView;
-@property (weak, nonatomic) IBOutlet UIView *topBottomLineView;
+@property (weak, nonatomic) IBOutlet UIView   *topBottomLineView;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
